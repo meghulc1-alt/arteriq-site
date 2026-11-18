@@ -754,9 +754,9 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 /* light puzzle hero */
 .leaplite::after{display:none!important}
 .leaplite{background:radial-gradient(ellipse 70% 60% at 72% 48%,#FFF1EE 0%,#FFFFFF 62%)}
-.pzl{position:absolute;z-index:1;right:max(16px,calc((100vw - 1240px)/2));top:50%;width:auto;height:min(76vh,640px);aspect-ratio:1386/2052;transform:translateY(-44%);right:max(60px,calc((100vw - 1100px)/2))}
+.pzl{position:absolute;z-index:1;right:max(16px,calc((100vw - 1240px)/2));top:50%;width:auto;height:min(76vh,640px);aspect-ratio:1274/1892;transform:translateY(-44%);right:max(60px,calc((100vw - 1100px)/2))}
 .pzl img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.pzp{animation:pzfloat 6.5s cubic-bezier(.65,0,.35,1) infinite;transform-origin:42% 68%}
+.pzh{animation:pzbeat 1.6s ease-in-out infinite;transform-origin:50% 60%;filter:drop-shadow(0 40px 40px rgba(110,20,25,.22))}@keyframes pzbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.025)}24%{transform:scale(1)}36%{transform:scale(1.014)}50%{transform:scale(1)}}
 @keyframes pzfloat{0%,22%{transform:none;filter:none}40%,62%{transform:translate(34%,7%) rotate(7deg) scale(1.06);filter:drop-shadow(18px 26px 22px rgba(90,20,20,.28))}80%,100%{transform:none;filter:none}}
 .leaplite .leaptop,.leaplite .leapbot{z-index:2}
 .leaplite .leaph{color:#1F2333}
@@ -978,7 +978,7 @@ body{font-size:15px}
 </div></header>
 
 <section id="top" class="leap leaplite">
-<div class="pzl" role="img" aria-label="A human heart with a puzzle-shaped piece that slides out and fits back into place"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><img class="pzp" fetchpriority="high" decoding="async" src="images/hero-piece.webp" alt=""></div>
+<div class="pzl" role="img" aria-label="A glossy human heart with coronary vessels"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
