@@ -751,23 +751,24 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .guardl li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:9px;border-radius:50%;background:#FC5050;box-shadow:0 0 12px #FC5050}
 .guardl b{font-weight:500;font-size:16px;color:#fff}.guardl span{font-size:15px;color:#A99F9C;margin-top:4px;line-height:1.55}
 @media (max-width:1000px){.guard{padding:72px 0}.guardg{grid-template-columns:minmax(0,1fr);gap:28px}.guardv{border-radius:24px}.guardp{font-size:16px}}
-/* swim hero */
-.leapsw picture{position:absolute;inset:0;z-index:0;display:block}
-.leapsw{background:#0b6f86}
-.leapsw::after{display:none!important}
-.leapsw .leapswim{object-position:50% 58%;animation:swimdrift 26s ease-in-out infinite alternate!important;transform-origin:47% 56%}
-@keyframes swimdrift{from{transform:scale(1.04)}to{transform:scale(1.1) translate(-.6%,-.8%)}}
-.leapsw::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(4,30,40,.62) 0%,rgba(4,30,40,.38) 36%,rgba(4,30,40,0) 62%),linear-gradient(180deg,rgba(4,30,40,.38) 0%,rgba(4,30,40,0) 26%),linear-gradient(0deg,rgba(4,30,40,.45) 0%,rgba(4,30,40,0) 32%)}
-.leapsw .leaptop,.leapsw .leapbot{z-index:2}
-.leapsw .leaph{color:#fff;text-shadow:0 2px 24px rgba(0,30,40,.3)}
-.leapsw .leaph .grad{color:#FC5050!important;background:none!important;-webkit-text-fill-color:#FC5050!important;filter:none!important;text-shadow:0 2px 18px rgba(0,20,30,.35)}
-.leapsw .leaplead{color:#F2F7F8;text-shadow:0 1px 14px rgba(0,30,40,.45)}
-.leapsw .leapeye{color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.leapsw .leapsec{background:rgba(255,255,255,.16)!important;color:#fff!important;border:1px solid rgba(255,255,255,.4)!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:none!important}
-.leapsw .leaptop{align-self:flex-start;align-items:flex-start!important;text-align:left;margin-left:max(0px,calc((100vw - 1208px)/2 - 24px));max-width:600px!important;margin-top:40px}
-.leapsw .leapbot{top:auto;bottom:14%}
-@media (max-width:1000px){.leapsw::before{background:linear-gradient(180deg,rgba(4,30,40,.55) 0%,rgba(4,30,40,.15) 38%,rgba(4,30,40,.15) 55%,rgba(4,30,40,.7) 100%)}.leapsw .leaph{font-size:34px!important}.leapsw .leapswim{object-position:50% 55%}}
-@media (prefers-reduced-motion:reduce){.leapsw .leapswim{animation:none!important}}
+/* couple hero */
+.leapcpl{background:#FBF3EC}
+.leapcpl picture{position:absolute;inset:0;z-index:0;display:block}
+.leapcpl::after{display:none!important}
+.leapcpl .leapcp{object-position:72% 30%;animation:cpdrift 30s ease-in-out infinite alternate!important;transform-origin:70% 40%}
+@keyframes cpdrift{from{transform:scale(1.02)}to{transform:scale(1.07)}}
+.leapcpl::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(251,243,236,.92) 0%,rgba(251,243,236,.78) 30%,rgba(251,243,236,0) 52%),linear-gradient(0deg,rgba(251,243,236,.55) 0%,rgba(251,243,236,0) 22%)}
+.leapcpl .leaptop,.leapcpl .leapbot{z-index:2}
+.leapcpl .leaph{color:#1F2333}
+.leapcpl .leaph .grad{color:#FC5050!important;background:none!important;-webkit-text-fill-color:#FC5050!important;filter:none!important}
+.leapcpl .leaplead{color:#4A5163}
+.leapcpl .leapeye{color:#E63E3E;background:rgba(255,255,255,.75);border:1px solid #FFD9D4}
+.leapcpl .leapsec{background:#fff!important;color:#1F2333!important;border:1px solid #E8DED6!important;box-shadow:none!important}
+.leapcpl .leaptop{align-self:flex-start;align-items:flex-start!important;text-align:left;margin-left:max(0px,calc((100vw - 1208px)/2 - 24px));max-width:560px!important;margin-top:40px}
+.leapcpl .leapbot{top:auto;bottom:14%}
+.leapcpl .leaph,.leapcpl .leaplead,.leapcpl .leapeye{text-shadow:none!important}
+@media (max-width:1000px){.leapcpl::before{display:none}.leapcpl picture{top:318px;bottom:31%;height:auto;-webkit-mask:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}.leapcpl .leapcp{object-position:62% 22%;animation:none!important}.leapcpl .leaph{font-size:34px!important}}
+@media (prefers-reduced-motion:reduce){.leapcpl .leapcp{animation:none!important}}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -949,8 +950,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapsw">
-<picture><source media="(max-width:900px)" srcset="images/hero-swim-m.webp"><img class="leapimg leapswim" fetchpriority="high" decoding="async" src="images/hero-swim.webp" alt="A man floating on his back in clear turquoise sea below white cliffs"></picture>
+<section id="top" class="leap leapcpl">
+<picture><source media="(max-width:900px)" srcset="images/hero-couple-m.webp"><img class="leapimg leapcp" fetchpriority="high" decoding="async" src="images/hero-couple.webp" alt="A smiling Indian couple in warm sunlight, with a glowing heart and heartbeat line beside them"></picture>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
