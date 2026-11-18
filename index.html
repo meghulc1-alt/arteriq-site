@@ -737,6 +737,20 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .bfx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9998}
 @media (pointer:coarse),(prefers-reduced-motion:reduce){.bfx{display:none}}
 
+/* guard */
+.guard{position:relative;background:radial-gradient(ellipse at 30% 50%,#2a1a1b 0%,#0e0909 55%,#060405 100%);color:#F3EDEA;padding:120px 0;overflow:hidden}
+.guardg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.guardv{position:relative;aspect-ratio:1/1;overflow:hidden;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 52%,transparent 72%);mask-image:radial-gradient(circle at 50% 50%,#000 52%,transparent 72%)}
+.guardvid{display:block;width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten}
+
+.guardeye{color:#FF8A80!important;margin:0 0 16px}
+.guardh{color:#FFFFFF;margin:0}.guard .grad{background:linear-gradient(90deg,#FF7A70,#FC5050);-webkit-background-clip:text;background-clip:text;color:transparent}
+.guardp{margin:22px 0 0;font-size:18px;line-height:1.65;color:#CFC6C3;max-width:46ch}
+.guardl{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.guardl li{display:grid;grid-template-columns:1fr;padding:16px 0 16px 26px;border-top:1px solid rgba(255,255,255,.1);position:relative}
+.guardl li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:9px;border-radius:50%;background:#FC5050;box-shadow:0 0 12px #FC5050}
+.guardl b{font-weight:500;font-size:16px;color:#fff}.guardl span{font-size:15px;color:#A99F9C;margin-top:4px;line-height:1.55}
+@media (max-width:1000px){.guard{padding:72px 0}.guardg{grid-template-columns:minmax(0,1fr);gap:28px}.guardv{border-radius:24px}.guardp{font-size:16px}}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -932,6 +946,11 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 
 <div class="sheet">
 <section class="lit" aria-label="Our promise"><div class="litpin"><div class="wrap"><p class="mono" style="margin-bottom:22px">The Arter.IQ difference</p><p class="littx"><span class="lw">Most</span> <span class="lw">heart</span> <span class="lw">supplements</span> <span class="lw">ask</span> <span class="lw">you</span> <span class="lw">to</span> <span class="lw">trust</span> <span class="lw">them.</span> <span class="lw lw2">We</span> <span class="lw lw2">ask</span> <span class="lw lw2">you</span> <span class="lw lw2">to</span> <span class="lw lw2">test</span> <span class="lw lw2">us.</span></p></div></div></section>
+<section class="guard" aria-label="We protect your heart"><div class="wrap guardg">
+<div class="guardv"><video class="guardvid" muted loop playsinline preload="none" poster="images/heart-poster.webp" aria-label="A steel-plated heart beating with a warm red glow"><source src="images/heart.webm" type="video/webm"><source src="images/heart.mp4" type="video/mp4"></video></div>
+<div class="guardt rise"><p class="mono guardeye">Protected, not promised</p><h2 class="disp h2 guardh">We guard what <span class="grad">keeps you going.</span></h2><p class="guardp">Your heart works every second of your life. We treat it that way: checked before you start, measured instead of guessed, and reviewed by a doctor before any decision.</p>
+<ul class="guardl"><li><b>Safety screen first</b><span>Blood thinners, bleeding history and surgery are checked before your first sachet.</span></li><li><b>Measured, not guessed</b><span>Two home blood tests, same lab, so your change is your own.</span></li><li><b>A doctor in the loop</b><span>A specialist reviews your results one to one.</span></li></ul></div>
+</div></section>
 <section id="why" class="sec why"><div class="whytop" aria-hidden="true"></div><img class="whybg" loading="lazy" decoding="async" src="images/bg-tree.webp" alt="" aria-hidden="true"><div class="wrap">
 <div class="whyhead rise"><p class="mono">Why it matters</p><h2 class="disp h2">Indian hearts need attention <span class="whyem">earlier.</span></h2><p class="lead">It’s India’s biggest killer, and it strikes younger here.</p></div>
 <div class="wsg"><div class="ws rise" style="transition-delay:0.0s"><p class="wsn">1<small>in</small><span class="cnt" style="--to:4"></span></p><p class="wsl"><b>deaths in India</b> is from heart disease</p></div><div class="ws rise" style="transition-delay:0.12s"><p class="wsn"><span class="cnt" style="--to:10"></span><small>yrs</small></p><p class="wsl"><b>earlier</b> than in the West</p></div><div class="ws rise" style="transition-delay:0.24s"><p class="wsn"><span class="cnt" style="--to:53"></span></p><p class="wsl"><b>average age</b> of a first heart attack</p></div></div>
@@ -1124,6 +1143,7 @@ function tick(now){var dt=Math.min(50,now-last);last=now;
  if(pts.length||cells.length||rings.length||Math.hypot(tx-mx,ty-my)>.5)requestAnimationFrame(tick);else{run=false;x.clearRect(0,0,W,H);}
 }
 })();
+(function(){var v=document.querySelector('.guardvid');if(!v)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{rootMargin:'200px'}).observe(v);}else{v.play();}})();
 var fq=document.querySelectorAll('[data-fq]');
 fq.forEach(function(b){b.addEventListener('click',function(){var i=b.getAttribute('data-fq');var open=b.getAttribute('aria-expanded')==='true';
  fq.forEach(function(x){x.setAttribute('aria-expanded','false');x.querySelector('.fqi').classList.remove('open');});
