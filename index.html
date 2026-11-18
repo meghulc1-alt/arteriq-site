@@ -751,6 +751,17 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .guardl li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:9px;border-radius:50%;background:#FC5050;box-shadow:0 0 12px #FC5050}
 .guardl b{font-weight:500;font-size:16px;color:#fff}.guardl span{font-size:15px;color:#A99F9C;margin-top:4px;line-height:1.55}
 @media (max-width:1000px){.guard{padding:72px 0}.guardg{grid-template-columns:minmax(0,1fr);gap:28px}.guardv{border-radius:24px}.guardp{font-size:16px}}
+/* dark hero */
+.leapdark{background:#0c0907}
+.leapdark .leapimg{left:auto;right:0;width:88%;object-position:62% 40%}
+.leapdark::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#0c0907 0%,#0c0907 14%,rgba(12,9,7,.75) 34%,rgba(12,9,7,0) 58%),linear-gradient(0deg,rgba(12,9,7,.6),rgba(12,9,7,0) 30%)}
+.leapdark .leapbot,.leapdark .leaptop{z-index:2}
+.leapdark .leaph{color:#fff}
+.leapdark .leaplead{color:#D9D0CB}
+.leapdark .leapeye{color:#FFB3AC;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.leapdark .leapsec{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.leapdark .leapsec:hover{background:rgba(255,255,255,.18)}
+@media (max-width:1000px){.leapdark .leapimg{width:100%;right:auto;left:0;object-position:46% 30%}.leapdark::before{background:linear-gradient(0deg,#0c0907 0%,rgba(12,9,7,.85) 38%,rgba(12,9,7,0) 62%),linear-gradient(180deg,rgba(12,9,7,.92) 0%,rgba(12,9,7,.7) 26%,rgba(12,9,7,0) 46%)}.leapdark .leapimg{top:12%;height:88%}}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -932,8 +943,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap">
-<img class="leapimg" fetchpriority="high" decoding="async" src="images/hero-leap.webp" alt="A lone diver leaping from a cliff into the sea">
+<section id="top" class="leap leapdark">
+<img class="leapimg" fetchpriority="high" decoding="async" src="images/hero-leap.webp" alt="A face half in light, half in shadow">
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
