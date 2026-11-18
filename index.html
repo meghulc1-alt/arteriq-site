@@ -796,18 +796,6 @@ body{font-size:15px}
 .why .msd{color:#fff}.pls .msd{color:#fff}.proto .msd{color:#E63E3E}
 }
 @media (min-width:701px){.msd{display:none}}
-/* protective rings */
-.pzg{position:absolute;left:50%;top:50%;width:150%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;overflow:visible;pointer-events:none}
-.pzl img{z-index:1}
-.pzg .pzr{transform-box:fill-box;transform-origin:center}
-.pzg .pzl1{fill:none;stroke:#fff;stroke-width:3;filter:url(#pzglow)}.pzgf{z-index:3}
-.pzg .pzl2{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;stroke-dasharray:14 86;filter:url(#pzglow);animation:pzrun 5s linear infinite}
-.pzr1{transform:rotate(-28deg)}.pzr2{transform:rotate(32deg)}.pzr3{transform:rotate(88deg)}
-.pzr2 .pzl2{animation-duration:6.5s;animation-direction:reverse}.pzr3 .pzl2{animation-duration:8s}
-.pzsh{fill:none;stroke:#fff;stroke-width:1.5;opacity:0;transform-origin:center;animation:pzpulse 3.2s ease-out infinite}
-@keyframes pzrun{to{stroke-dashoffset:-100}}
-@keyframes pzpulse{0%{opacity:.9;transform:scale(.55)}100%{opacity:0;transform:scale(1.05)}}
-.pzfront{position:absolute;inset:0;z-index:2;pointer-events:none}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -990,8 +978,7 @@ body{font-size:15px}
 </div></header>
 
 <section id="top" class="leap leaplite">
-<div class="pzl" role="img" aria-label="A human heart with a puzzle-shaped piece that slides out and fits back into place"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><img class="pzp" fetchpriority="high" decoding="async" src="images/hero-piece.webp" alt=""><svg class="pzg" viewBox="-300 -300 600 600" aria-hidden="true"><defs><filter id="pzglow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#C2312C" flood-opacity=".35"/><feGaussianBlur stdDeviation="1.2"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="pzbg"><stop offset="0" stop-color="#FFC9C1" stop-opacity=".95"/><stop offset=".5" stop-color="#FFDDD7" stop-opacity=".7"/><stop offset="1" stop-color="#FFF1EE" stop-opacity="0"/></radialGradient><clipPath id="pzfc"><rect x="-320" y="0" width="640" height="320"/></clipPath></defs>
-<circle r="285" fill="url(#pzbg)"/><g class="pzr pzr1"><g><ellipse rx="250" ry="92" class="pzl1"/><ellipse rx="250" ry="92" class="pzl2" pathLength="100"/></g></g><g class="pzr pzr2"><g><ellipse rx="236" ry="84" class="pzl1"/><ellipse rx="236" ry="84" class="pzl2" pathLength="100"/></g></g><g class="pzr pzr3"><g><ellipse rx="222" ry="78" class="pzl1"/><ellipse rx="222" ry="78" class="pzl2" pathLength="100"/></g></g><circle r="268" class="pzsh"/></svg><svg class="pzg pzgf" viewBox="-300 -300 600 600" aria-hidden="true"><g class="pzr pzr1"><g clip-path="url(#pzfc)"><ellipse rx="250" ry="92" class="pzl1"/><ellipse rx="250" ry="92" class="pzl2" pathLength="100"/></g></g><g class="pzr pzr2"><g clip-path="url(#pzfc)"><ellipse rx="236" ry="84" class="pzl1"/><ellipse rx="236" ry="84" class="pzl2" pathLength="100"/></g></g><g class="pzr pzr3"><g clip-path="url(#pzfc)"><ellipse rx="222" ry="78" class="pzl1"/><ellipse rx="222" ry="78" class="pzl2" pathLength="100"/></g></g></svg></div>
+<div class="pzl" role="img" aria-label="A human heart with a puzzle-shaped piece that slides out and fits back into place"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><img class="pzp" fetchpriority="high" decoding="async" src="images/hero-piece.webp" alt=""></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
