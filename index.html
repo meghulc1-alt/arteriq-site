@@ -758,20 +758,34 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .pzl img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .pzl .pzb,.pzl .pzh,.pzl .pzf,.pzl .pzp,.pzl .pzo{position:absolute;inset:0;width:100%;height:100%}
 .pzh,.pzp,.pzo{object-fit:contain}
-.pzb{animation:pzjoy 7s ease-in-out infinite;transform-origin:42% 60%}
+.pzb{transform-origin:42% 60%}
 .pzh{filter:drop-shadow(0 30px 34px rgba(150,20,25,.16))}
 .pzf{-webkit-mask:var(--hm) center/contain no-repeat;mask:var(--hm) center/contain no-repeat;background:var(--fl) 0 0/170% auto;mix-blend-mode:soft-light;opacity:.95;animation:pzflow 14s linear infinite}
-.pzp{animation:pzpin 7s linear infinite}
-.pzo{z-index:2;animation:pzout 7s cubic-bezier(.55,0,.35,1) infinite}
+.pzp{opacity:0}
+.pzo{z-index:2;will-change:transform}
+.pzl:not(.fit) .pzo{animation:pzbob 3.2s ease-in-out infinite}
+@keyframes pzbob{0%,100%{translate:0 0}50%{translate:0 -1.6%}}
+.pzl.fit .pzo{opacity:0}.pzl.fit .pzp{opacity:1}
 @keyframes pzflow{0%{background-position:0% 30%}50%{background-position:100% 70%}100%{background-position:0% 30%}}
-@keyframes pzout{0%{transform:translate(9%,-9%) rotate(6deg);opacity:0}6%{opacity:1}22%{transform:none;opacity:1}38%{transform:translate(-26%,29%) scale(.985);opacity:1}42%,100%{transform:translate(-28.6%,31.7%) scale(.98);opacity:0}}
-@keyframes pzpin{0%,40%{opacity:0}42%,88%{opacity:1}94%,100%{opacity:0}}
-@keyframes pzjoy{0%,42%{transform:none;filter:saturate(.92) brightness(.97)}47%{transform:scale(1.045);filter:saturate(1.15) brightness(1.06) drop-shadow(0 0 40px rgba(255,80,70,.45))}52%{transform:scale(1)}57%{transform:scale(1.03);filter:saturate(1.12) brightness(1.05) drop-shadow(0 0 30px rgba(255,80,70,.35))}64%,84%{transform:scale(1);filter:saturate(1.08) brightness(1.03)}100%{transform:none;filter:saturate(.92) brightness(.97)}}
-.pzring{position:absolute;left:42%;top:58%;width:60%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(252,80,80,.55);transform:translate(-50%,-50%) scale(.6);opacity:0;animation:pzring 7s ease-out infinite;pointer-events:none}
-.pzring2{animation-delay:.18s;border-color:rgba(252,80,80,.35)}
-@keyframes pzring{0%,42%{opacity:0;transform:translate(-50%,-50%) scale(.6)}44%{opacity:.9}66%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
-.pzhp{position:absolute;left:var(--x);top:34%;z-index:3;font-size:clamp(14px,1.8vw,26px);color:#FC5050;opacity:0;animation:pzhp 7s ease-out infinite;animation-delay:var(--d);pointer-events:none;text-shadow:0 4px 12px rgba(252,80,80,.4)}
-@keyframes pzhp{0%,43%{opacity:0;transform:translateY(0) scale(.4)}48%{opacity:1;transform:translateY(-20px) scale(1)}70%,100%{opacity:0;transform:translateY(-90px) scale(.8)}}
+.pzl.joy .pzb{animation:pzjoy 1.9s ease-in-out both}
+@keyframes pzjoy{0%{transform:none;filter:none}18%{transform:scale(1.05);filter:saturate(1.15) brightness(1.07) drop-shadow(0 0 40px rgba(255,80,70,.45))}36%{transform:scale(1)}52%{transform:scale(1.03);filter:saturate(1.12) brightness(1.05) drop-shadow(0 0 30px rgba(255,80,70,.35))}100%{transform:scale(1);filter:saturate(1.06) brightness(1.02)}}
+.pzring{position:absolute;left:42%;top:58%;width:60%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(252,80,80,.55);transform:translate(-50%,-50%) scale(.6);opacity:0;pointer-events:none}
+.pzring2{border-color:rgba(252,80,80,.35)}
+.pzl.joy .pzring{animation:pzring 1.6s ease-out both}.pzl.joy .pzring2{animation-delay:.2s}
+@keyframes pzring{0%{opacity:.9;transform:translate(-50%,-50%) scale(.6)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
+.pzhp{position:absolute;left:var(--x);top:34%;z-index:3;font-size:clamp(14px,1.8vw,26px);color:#FC5050;opacity:0;pointer-events:none;text-shadow:0 4px 12px rgba(252,80,80,.4)}
+.pzl.joy .pzhp{animation:pzhp 2.2s ease-out both;animation-delay:var(--d)}
+@keyframes pzhp{0%{opacity:0;transform:translateY(0) scale(.4)}20%{opacity:1;transform:translateY(-20px) scale(1)}100%{opacity:0;transform:translateY(-110px) scale(.8)}}
+.ecg{position:absolute;left:0;right:0;top:56%;width:100%;height:110px;transform:translateY(-50%);z-index:0;pointer-events:none;overflow:visible}
+.ecg path{fill:none;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.ecgb{stroke:rgba(252,80,80,.13);stroke-width:1.5}
+.ecgr{stroke:#FC5050;stroke-width:2;stroke-dasharray:7 93;opacity:.55;animation:ecgrun 6s linear infinite;filter:drop-shadow(0 0 4px rgba(252,80,80,.6))}
+@keyframes ecgrun{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+.leap.beat .ecgb{animation:ecgflash 1.4s ease-out}
+.leap.beat .ecgr{animation-duration:2.2s;opacity:.9;stroke-width:2.6}
+@keyframes ecgflash{0%{stroke:rgba(252,80,80,.7);stroke-width:2.4}100%{stroke:rgba(252,80,80,.13);stroke-width:1.5}}
+.pzl::after{content:"Scroll to complete";position:absolute;left:42%;bottom:-4%;transform:translateX(-50%);white-space:nowrap;font:500 11px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C7605A;opacity:.8;transition:opacity .4s}
+.pzl.fit::after{content:"Complete";opacity:.9}
 @media (prefers-reduced-motion:reduce){.pzo{display:none}.pzp{opacity:1!important}}
 
 @keyframes pzfloat{0%,22%{transform:none;filter:none}40%,62%{transform:translate(34%,7%) rotate(7deg) scale(1.06);filter:drop-shadow(18px 26px 22px rgba(90,20,20,.28))}80%,100%{transform:none;filter:none}}
@@ -995,7 +1009,7 @@ body{font-size:15px}
 </div></header>
 
 <section id="top" class="leap leaplite">
-<div class="pzl" role="img" aria-label="A glossy red heart: a silver puzzle piece slides into its missing slot and the heart beats with joy"><div class="pzb"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><div class="pzf" style="--hm:url(images/hero-heart.webp);--fl:url(images/hero-flow.webp)"></div><img class="pzp" decoding="async" src="images/hero-piece.webp" alt=""></div><span class="pzring"></span><span class="pzring pzring2"></span><span class="pzhp" style="--x:44%;--d:0s">&#10084;</span><span class="pzhp" style="--x:56%;--d:0.18s">&#10084;</span><span class="pzhp" style="--x:32%;--d:0.34s">&#10084;</span><span class="pzhp" style="--x:66%;--d:0.5s">&#10084;</span><img class="pzo" decoding="async" src="images/hero-pout.webp" alt=""></div>
+<svg class="ecg" viewBox="0 0 1600 80" preserveAspectRatio="none" aria-hidden="true"><path class="ecgb" d="M0,50 L60,50 L70,46 L80,50 L92,50 L98,58 L106,8 L114,72 L122,50 L140,50 L156,42 L172,50 L200,50 L260,50 L270,46 L280,50 L292,50 L298,58 L306,8 L314,72 L322,50 L340,50 L356,42 L372,50 L400,50 L460,50 L470,46 L480,50 L492,50 L498,58 L506,8 L514,72 L522,50 L540,50 L556,42 L572,50 L600,50 L660,50 L670,46 L680,50 L692,50 L698,58 L706,8 L714,72 L722,50 L740,50 L756,42 L772,50 L800,50 L860,50 L870,46 L880,50 L892,50 L898,58 L906,8 L914,72 L922,50 L940,50 L956,42 L972,50 L1000,50 L1060,50 L1070,46 L1080,50 L1092,50 L1098,58 L1106,8 L1114,72 L1122,50 L1140,50 L1156,42 L1172,50 L1200,50 L1260,50 L1270,46 L1280,50 L1292,50 L1298,58 L1306,8 L1314,72 L1322,50 L1340,50 L1356,42 L1372,50 L1400,50 L1460,50 L1470,46 L1480,50 L1492,50 L1498,58 L1506,8 L1514,72 L1522,50 L1540,50 L1556,42 L1572,50"/><path class="ecgr" d="M0,50 L60,50 L70,46 L80,50 L92,50 L98,58 L106,8 L114,72 L122,50 L140,50 L156,42 L172,50 L200,50 L260,50 L270,46 L280,50 L292,50 L298,58 L306,8 L314,72 L322,50 L340,50 L356,42 L372,50 L400,50 L460,50 L470,46 L480,50 L492,50 L498,58 L506,8 L514,72 L522,50 L540,50 L556,42 L572,50 L600,50 L660,50 L670,46 L680,50 L692,50 L698,58 L706,8 L714,72 L722,50 L740,50 L756,42 L772,50 L800,50 L860,50 L870,46 L880,50 L892,50 L898,58 L906,8 L914,72 L922,50 L940,50 L956,42 L972,50 L1000,50 L1060,50 L1070,46 L1080,50 L1092,50 L1098,58 L1106,8 L1114,72 L1122,50 L1140,50 L1156,42 L1172,50 L1200,50 L1260,50 L1270,46 L1280,50 L1292,50 L1298,58 L1306,8 L1314,72 L1322,50 L1340,50 L1356,42 L1372,50 L1400,50 L1460,50 L1470,46 L1480,50 L1492,50 L1498,58 L1506,8 L1514,72 L1522,50 L1540,50 L1556,42 L1572,50" pathLength="100"/></svg><div class="pzl" role="img" aria-label="A red heart with a missing silver puzzle piece that slides into place as you scroll"><div class="pzb"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><div class="pzf" style="--hm:url(images/hero-heart.webp);--fl:url(images/hero-flow.webp)"></div><img class="pzp" decoding="async" src="images/hero-piece.webp" alt=""></div><span class="pzring"></span><span class="pzring pzring2"></span><span class="pzhp" style="--x:44%;--d:0s">&#10084;</span><span class="pzhp" style="--x:56%;--d:0.18s">&#10084;</span><span class="pzhp" style="--x:32%;--d:0.34s">&#10084;</span><span class="pzhp" style="--x:66%;--d:0.5s">&#10084;</span><img class="pzo" decoding="async" src="images/hero-pout.webp" alt=""></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
@@ -1202,6 +1216,14 @@ function tick(now){var dt=Math.min(50,now-last);last=now;
 })();
 (function(){var v=document.querySelector('.guardvid');if(!v)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{rootMargin:'200px'}).observe(v);}else{v.play();}})();
 (function(){if(!matchMedia('(max-width:700px)').matches)return;[].slice.call(document.querySelectorAll('.wsg,.plg,.pils')).forEach(function(r){var n=r.children.length;if(n<2)return;var d=document.createElement('div');d.className='msd';d.setAttribute('aria-hidden','true');for(var i=0;i<n;i++){d.appendChild(document.createElement('i'));}r.parentNode.insertBefore(d,r.nextSibling);function up(){var w=r.children[0].offsetWidth+12,k=Math.round(r.scrollLeft/w);[].forEach.call(d.children,function(e,i){e.classList.toggle('on',i===Math.min(k,n-1));});}r.addEventListener('scroll',up,{passive:true});up();});})();
+(function(){var L=document.querySelector('.pzl');if(!L)return;var o=L.querySelector('.pzo'),sec=L.closest('.leap'),fit=false,tk=false;
+var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function set(t){var e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;var arc=Math.sin(Math.PI*e)*-6;
+o.style.transform='translate('+(-28.6*e)+'%,'+(31.7*e+arc)+'%) rotate('+(-4*Math.sin(Math.PI*e))+'deg) scale('+(1-.02*e)+')';
+if(t>=1&&!fit){fit=true;L.classList.add('fit');L.classList.remove('joy');void L.offsetWidth;L.classList.add('joy');if(sec){sec.classList.remove('beat');void sec.offsetWidth;sec.classList.add('beat');}}
+else if(t<.96&&fit){fit=false;L.classList.remove('fit','joy');if(sec)sec.classList.remove('beat');}}
+function upd(){tk=false;var r=Math.min(window.innerHeight*.2,170);set(red?1:Math.max(0,Math.min(1,window.scrollY/r)));}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd);}},{passive:true});addEventListener('resize',upd);upd();})();
 var fq=document.querySelectorAll('[data-fq]');
 fq.forEach(function(b){b.addEventListener('click',function(){var i=b.getAttribute('data-fq');var open=b.getAttribute('aria-expanded')==='true';
  fq.forEach(function(x){x.setAttribute('aria-expanded','false');x.querySelector('.fqi').classList.remove('open');});
