@@ -754,10 +754,10 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 /* light puzzle hero */
 .leaplite::after{display:none!important}
 .leaplite{background:radial-gradient(ellipse 70% 60% at 72% 48%,#FFF1EE 0%,#FFFFFF 62%)}
-.pzl{position:absolute;z-index:1;right:max(16px,calc((100vw - 1240px)/2));top:50%;width:min(45vw,680px);aspect-ratio:2274/1191;transform:translateY(-40%)}
+.pzl{position:absolute;z-index:1;right:max(16px,calc((100vw - 1240px)/2));top:50%;width:auto;height:min(76vh,640px);aspect-ratio:1386/2052;transform:translateY(-44%);right:max(60px,calc((100vw - 1100px)/2))}
 .pzl img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.pzp{animation:pzfloat 6s ease-in-out infinite}
-@keyframes pzfloat{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-1.6%,-1.8%) rotate(-1deg)}}
+.pzp{animation:pzfloat 6.5s cubic-bezier(.65,0,.35,1) infinite;transform-origin:42% 68%}
+@keyframes pzfloat{0%,22%{transform:none;filter:none}40%,62%{transform:translate(34%,7%) rotate(7deg) scale(1.06);filter:drop-shadow(18px 26px 22px rgba(90,20,20,.28))}80%,100%{transform:none;filter:none}}
 .leaplite .leaptop,.leaplite .leapbot{z-index:2}
 .leaplite .leaph{color:#1F2333}
 .leaplite .leaplead{color:#4A5163}
@@ -766,11 +766,11 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .leaplite .leapsec:hover{background:#FFF6F4}
 .leaplite .leaptop{align-self:flex-start;align-items:flex-start!important;text-align:left;margin-left:max(0px,calc((100vw - 1208px)/2 - 24px));max-width:560px!important;margin-top:40px}
 .leaplite .leapbot{top:auto;bottom:16%}
-@media (max-width:1100px){.pzl{width:44vw}.leaplite .leaph{font-size:44px}}
+@media (max-width:1100px){.pzl{height:min(64vh,560px)}.leaplite .leaph{font-size:44px}}
 @media (max-width:1000px){
 .leaplite{min-height:0!important;padding:96px 20px 64px!important;display:flex;flex-direction:column;justify-content:flex-start}
 .leaplite .leaptop{order:1;margin:0 0 6px;align-items:flex-start!important;text-align:left;max-width:none!important}
-.pzl{order:2;position:relative;right:auto;top:auto;transform:none;width:100%;max-width:460px;margin:18px auto 22px;align-self:center}
+.pzl{order:2;position:relative;right:auto;top:auto;transform:none;width:auto;height:340px;margin:14px auto 18px;align-self:center}
 .leaplite .leapbot{order:3;position:relative!important;bottom:auto;margin-top:0;align-self:stretch}
 .leaplite .leaph{font-size:30px!important;line-height:1.12}
 .leaplite .leapeye{font-size:11px;padding:6px 12px}
@@ -978,7 +978,7 @@ body{font-size:15px}
 </div></header>
 
 <section id="top" class="leap leaplite">
-<div class="pzl" role="img" aria-label="A red heart with a marbled blood texture and its missing white-blood-cell puzzle piece about to slot back in"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><img class="pzp" fetchpriority="high" decoding="async" src="images/hero-piece.webp" alt=""></div>
+<div class="pzl" role="img" aria-label="A human heart with a puzzle-shaped piece that slides out and fits back into place"><img class="pzh" fetchpriority="high" decoding="async" src="images/hero-heart.webp" alt=""><img class="pzp" fetchpriority="high" decoding="async" src="images/hero-piece.webp" alt=""></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
