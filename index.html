@@ -751,24 +751,26 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .guardl li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:9px;border-radius:50%;background:#FC5050;box-shadow:0 0 12px #FC5050}
 .guardl b{font-weight:500;font-size:16px;color:#fff}.guardl span{font-size:15px;color:#A99F9C;margin-top:4px;line-height:1.55}
 @media (max-width:1000px){.guard{padding:72px 0}.guardg{grid-template-columns:minmax(0,1fr);gap:28px}.guardv{border-radius:24px}.guardp{font-size:16px}}
-/* couple hero */
-.leapcpl{background:#fff}
-.leapcpl picture{position:absolute;inset:0;z-index:0;display:block}
-.leapcpl::after{display:none!important}
-.leapcpl .leapcp{object-position:72% 30%;animation:cpdrift 30s ease-in-out infinite alternate!important;transform-origin:70% 40%}
-@keyframes cpdrift{from{transform:scale(1.02)}to{transform:scale(1.07)}}
-.leapcpl::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.7) 30%,rgba(255,255,255,0) 50%)}
-.leapcpl .leaptop,.leapcpl .leapbot{z-index:2}
-.leapcpl .leaph{color:#1F2333}
-.leapcpl .leaph .grad{color:#FC5050!important;background:none!important;-webkit-text-fill-color:#FC5050!important;filter:none!important}
-.leapcpl .leaplead{color:#4A5163}
-.leapcpl .leapeye{color:#E63E3E;background:rgba(255,255,255,.75);border:1px solid #FFD9D4}
-.leapcpl .leapsec{background:#fff!important;color:#1F2333!important;border:1px solid #E8DED6!important;box-shadow:none!important}
-.leapcpl .leaptop{align-self:flex-start;align-items:flex-start!important;text-align:left;margin-left:max(0px,calc((100vw - 1208px)/2 - 24px));max-width:560px!important;margin-top:40px}
-.leapcpl .leapbot{top:auto;bottom:14%}
-.leapcpl .leaph,.leapcpl .leaplead,.leapcpl .leapeye{text-shadow:none!important}
-@media (max-width:1000px){.leapcpl::before{display:none}.leapcpl picture{top:318px;bottom:31%;height:auto;-webkit-mask:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}.leapcpl .leapcp{object-position:62% 22%;animation:none!important}.leapcpl .leaph{font-size:34px!important}}
-@media (prefers-reduced-motion:reduce){.leapcpl .leapcp{animation:none!important}}
+/* glass heart hero */
+.leapgl{background:#fff}
+.leapgl::after,.leapgl::before{display:none!important}
+.ghw{position:absolute;z-index:1;top:50%;right:max(40px,calc((100vw - 1180px)/2 + 40px));height:min(86vh,720px);aspect-ratio:1128/1848;transform:translateY(-46%)}
+.ghw::before{content:"";position:absolute;inset:8% -30% 22% -30%;background:radial-gradient(closest-side,rgba(252,80,80,.14),rgba(252,80,80,0));z-index:-1}
+.ghw picture{display:block;width:100%;height:100%}
+.gh{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;animation:ghbeat 1.8s ease-in-out infinite;transform-origin:50% 62%}
+@keyframes ghbeat{0%,100%{transform:scale(1)}10%{transform:scale(1.022)}20%{transform:scale(1)}32%{transform:scale(1.012)}46%{transform:scale(1)}}
+.leapgl .leaptop,.leapgl .leapbot{z-index:2}
+.leapgl .leaph{color:#1F2333}
+.leapgl .leaph .grad{color:#FC5050!important;background:none!important;-webkit-text-fill-color:#FC5050!important;filter:none!important}
+.leapgl .leaplead{color:#4A5163}
+.leapgl .leapeye{color:#E63E3E;background:#FFF1EE;border:1px solid #FFD9D4}
+.leapgl .leapsec{background:#fff!important;color:#1F2333!important;border:1px solid #E5E1DE!important;box-shadow:none!important}
+.leapgl .leaptop{align-self:flex-start;align-items:flex-start!important;text-align:left;margin-left:max(0px,calc((100vw - 1208px)/2 - 24px));max-width:560px!important;margin-top:40px}
+.leapgl .leapbot{top:auto;bottom:14%}
+.leapgl .leaph,.leapgl .leaplead,.leapgl .leapeye{text-shadow:none!important}
+@media (max-width:1100px){.ghw{height:min(70vh,560px);right:24px}}
+@media (max-width:1000px){.leapgl .leaph{font-size:34px!important}.ghw{top:296px;right:50%;transform:translateX(50%);height:300px}.ghw::before{display:none}.gh{-webkit-mask:linear-gradient(180deg,#000 66%,transparent 75%);mask:linear-gradient(180deg,#000 66%,transparent 75%)}.leapgl .leapbot{bottom:auto}}
+@media (prefers-reduced-motion:reduce){.gh{animation:none}}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -950,8 +952,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapcpl">
-<picture><source media="(max-width:900px)" srcset="images/hero-couple-m.webp"><img class="leapimg leapcp" fetchpriority="high" decoding="async" src="images/hero-couple.webp" alt="A smiling Indian couple in warm sunlight, with a glowing heart and heartbeat line beside them"></picture>
+<section id="top" class="leap leapgl">
+<div class="ghw"><picture><source media="(max-width:900px)" srcset="images/hero-glass-m.webp"><img class="gh" fetchpriority="high" decoding="async" src="images/hero-glass.webp" alt="A glass human heart with red vessels, standing on a reflective white surface"></picture></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
