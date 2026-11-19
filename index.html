@@ -830,6 +830,18 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (prefers-reduced-motion:reduce){.hpz .hpzi,.hpz .hpzs,.hpz .hpzw{animation:none}}
 .hpz .hglow{inset:10% 8% 14% 8%}
 @media (max-width:1000px){.hpz{aspect-ratio:1.12}}
+/* dark puzzle hero */
+.hdr .hbar{background:rgba(255,255,255,.97)!important}
+.leapbx.leapdk{background:radial-gradient(ellipse 55% 75% at 18% 62%,#2B2B2B 0%,#151515 55%,#0A0A0A 100%)}
+.hpzx{width:min(60vw,1000px)!important;aspect-ratio:1130/848!important;right:0!important;transform:translateY(-50%)!important}
+.hpxi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;-webkit-mask:linear-gradient(90deg,transparent 0,#000 13%,#000 100%),linear-gradient(180deg,transparent 0,#000 9%,#000 89%,transparent 100%);-webkit-mask-composite:source-in;mask:linear-gradient(90deg,transparent 0,#000 13%,#000 100%),linear-gradient(180deg,transparent 0,#000 9%,#000 89%,transparent 100%);mask-composite:intersect}
+.leapdk .leaph{color:#FFFFFF!important}
+.leapdk .leaph .grad{color:#FF5A5A!important;-webkit-text-fill-color:#FF5A5A!important}
+.leapdk .leaplead{color:rgba(255,255,255,.78)!important}
+.leapdk .leapeye{color:#FF7A72!important;background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.16)!important}
+.leapdk .leapsec{background:rgba(255,255,255,.04)!important;color:#fff!important;border:1px solid rgba(255,255,255,.34)!important}
+.leapdk .leapsec:hover{background:rgba(255,255,255,.12)!important}
+@media (max-width:1000px){.hpzx{width:calc(100% + 40px)!important;max-width:none!important;margin:6px -20px 8px!important;transform:none!important;right:auto!important}.hpxi{-webkit-mask:linear-gradient(180deg,transparent 0,#000 9%,#000 89%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 9%,#000 89%,transparent 100%)}.leapbx.leapdk{background:radial-gradient(ellipse 90% 60% at 30% 55%,#262626 0%,#121212 60%,#0A0A0A 100%)}}
 /* reviews */
 .rvrow{display:flex;gap:20px;width:max-content;animation:marq 70s linear infinite}
 .rvrow.rev{animation:marqr 80s linear infinite}
@@ -1011,8 +1023,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapbx">
-<div class="hbox hpz"><div class="hglow"></div><div class="hpzw"><div class="hpzb"><img class="hpzi" fetchpriority="high" decoding="async" src="images/hero-pzheart.webp" alt="A glossy red heart with one puzzle piece missing"><span class="hpzs" style="--m:url(images/hero-pzheart.webp)"></span></div></div><div class="hfloor"></div></div>
+<section id="top" class="leap leapbx leapdk">
+<div class="hbox hpzx"><img class="hpxi" fetchpriority="high" decoding="async" src="images/hero-pzfull.webp" alt="A glossy red heart with one puzzle piece missing"></div>
 <div class="leaptop rise">
 <p class="leapeye">Arter.IQ · Proof, not promises</p>
 <h1 class="disp h1 leaph">Your heart deserves better questions. <span class="grad">And clearer answers.</span></h1>
