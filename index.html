@@ -1366,6 +1366,14 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (min-width:1001px){.hfull:has(.hbgd) .leaptop,.hfull:has(.hbgd) .leapbot{align-self:flex-start!important;margin-right:0!important;margin-left:max(24px,calc((100vw - 1208px)/2))!important;width:min(560px,42vw)}.hfull:has(.hbgd) .leaph{font-size:clamp(40px,4vw,62px)!important}}
 @media (min-width:1001px) and (max-height:800px){.hfull:has(.hbgd) .leaptop{margin-top:-150px!important}}
 @media (max-width:1000px){.leapbx.hfull:has(.hbgd){padding-top:calc(118vw)!important}}
+/* transparent header over underwater hero (until scrolled) */
+.hfull .hbg.hbgd{top:0!important}
+body:has(.hbgd) .hdr:not(.sc) .hbar{background:transparent!important;box-shadow:none!important;border-color:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+body:has(.hbgd) .hdr:not(.sc) .logo{color:#FFFFFF!important}
+body:has(.hbgd) .hdr:not(.sc) .hnav a{color:#FFFFFF!important;opacity:.9!important}
+body:has(.hbgd) .hdr:not(.sc) .ldesc{color:#FFB59A!important;border-left-color:rgba(255,255,255,.3)!important}
+.hdr .hbar{transition:background .35s,box-shadow .35s,height .35s}
+.hfull .hbg.hbgd::before{content:"";display:block!important;position:absolute;left:0;right:0;top:0;height:160px;background:linear-gradient(180deg,rgba(3,4,5,.45),rgba(3,4,5,0));z-index:1;pointer-events:none}
 
 [hidden]{display:none!important}
 </style>
