@@ -1268,6 +1268,13 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .jtsteps b{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#E63E3E;font-weight:600}
 @media (max-width:1000px){.jtcard{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:26px}.jteaser{padding:60px 0!important}.jtsteps li{grid-template-columns:30px 1fr;row-gap:2px}.jtsteps li b{grid-column:2}.jtsteps li::before{grid-row:span 2}}
 .jtx .btn{box-sizing:border-box;max-width:100%}@media (max-width:1000px){.jtx .btn{width:100%;justify-content:center}}
+/* heart-glass hero */
+.hbgh{background:radial-gradient(ellipse 45% 60% at 26% 42%,#F25A55 0%,rgba(242,90,85,0) 70%),linear-gradient(180deg,#E0514D 0%,#D44743 62%,#B23B3C 100%)}
+.hbgh .hgl{position:absolute;width:auto!important;object-fit:contain!important;filter:drop-shadow(0 40px 50px rgba(90,10,12,.35));animation:hbgin 1.6s cubic-bezier(.2,.8,.2,1) both}
+@media (min-width:1001px){.hbgh .hgl{height:calc(100% - 110px)!important;left:max(10px,calc((100vw - 1208px)/2 + 40px));top:20px;bottom:auto}}
+@media (max-width:1000px){.hbgh .hgl{height:min(122vw,620px)!important;left:50%;top:12px;transform-origin:50% 50%;margin-left:calc(min(122vw,620px) * -0.329)}.leapbx.hfull{padding-top:calc(min(122vw,620px) + 60px)!important}}
+.hfull .hbg.hbgh{bottom:0!important}.hfull .hbgh::after{display:none!important}
+@media (min-width:1001px){.hbgh .hgl{height:calc(100% - 210px)!important;top:28px}}
 
 [hidden]{display:none!important}
 </style>

@@ -1268,6 +1268,13 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 .jtsteps b{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#E63E3E;font-weight:600}
 @media (max-width:1000px){.jtcard{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:26px}.jteaser{padding:60px 0!important}.jtsteps li{grid-template-columns:30px 1fr;row-gap:2px}.jtsteps li b{grid-column:2}.jtsteps li::before{grid-row:span 2}}
 .jtx .btn{box-sizing:border-box;max-width:100%}@media (max-width:1000px){.jtx .btn{width:100%;justify-content:center}}
+/* heart-glass hero */
+.hbgh{background:radial-gradient(ellipse 45% 60% at 26% 42%,#F25A55 0%,rgba(242,90,85,0) 70%),linear-gradient(180deg,#E0514D 0%,#D44743 62%,#B23B3C 100%)}
+.hbgh .hgl{position:absolute;width:auto!important;object-fit:contain!important;filter:drop-shadow(0 40px 50px rgba(90,10,12,.35));animation:hbgin 1.6s cubic-bezier(.2,.8,.2,1) both}
+@media (min-width:1001px){.hbgh .hgl{height:calc(100% - 110px)!important;left:max(10px,calc((100vw - 1208px)/2 + 40px));top:20px;bottom:auto}}
+@media (max-width:1000px){.hbgh .hgl{height:min(122vw,620px)!important;left:50%;top:12px;transform-origin:50% 50%;margin-left:calc(min(122vw,620px) * -0.329)}.leapbx.hfull{padding-top:calc(min(122vw,620px) + 60px)!important}}
+.hfull .hbg.hbgh{bottom:0!important}.hfull .hbgh::after{display:none!important}
+@media (min-width:1001px){.hbgh .hgl{height:calc(100% - 210px)!important;top:28px}}
 
 [hidden]{display:none!important}
 </style>
@@ -1282,8 +1289,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapbx hfull" aria-label="An Arter.IQ Orange sachet being poured into a glass of water">
-<div class="hbg" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/hero-bg-tall.webp"><img fetchpriority="high" decoding="async" src="images/hero-bg-wide.webp" alt=""></picture><div class="hbgsh"></div></div>
+<section id="top" class="leap leapbx hfull" aria-label="Orange liquid flowing out of a glass in the shape of a heart">
+<div class="hbg hbgh" aria-hidden="true"><img class="hgl" fetchpriority="high" decoding="async" src="images/hero-heartglass.webp" alt=""><div class="hbgsh"></div></div>
 <div class="leaptop rise">
 <p class="leapeye">Heart &amp; Artery Care</p>
 <h1 class="disp h1 leaph">Your daily dose of<br> Japanese heart care.</h1><p class="leapfu"><b>10,000 FU.</b> Made for Indian hearts.</p>
@@ -1523,7 +1530,7 @@ var M=[['Good habits. Now make sure.','Your answers look reassuring. But only a 
 box.querySelectorAll('.hq').forEach(function(q){q.querySelectorAll('.hqb').forEach(function(b){b.addEventListener('click',function(){q.querySelectorAll('.hqb').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');ans[q.dataset.q]=+b.dataset.v;
 var k=Object.keys(ans);if(k.length<4){H.textContent=(4-k.length)+(4-k.length===1?' question':' questions')+' to go.';return;}
 var t=k.reduce(function(a,x){return a+ans[x]},0),i=t<=2?0:(t<=5?1:2);H.textContent=M[i][0];P.textContent=M[i][1];R.classList.add('done');});});});})();
-(function(){var h=document.querySelector('.hfull');if(!h)return;var im=h.querySelector('.hbg img'),sh=h.querySelector('.hbgsh'),pr=h.querySelector('.prf');
+(function(){var h=document.querySelector('.hfull');if(!h)return;var im=h.querySelector('.hbg img.hgl')||h.querySelector('.hbg img'),sh=h.querySelector('.hbgsh'),pr=h.querySelector('.prf');
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=0;
 function f(){t=0;var p=Math.max(0,Math.min(1,scrollY/(h.offsetHeight||innerHeight)));im.style.transform='translate3d(0,'+(p*7).toFixed(2)+'%,0) scale('+(1+p*.14).toFixed(4)+')';sh.style.opacity=(p*.55).toFixed(3);if(pr)pr.style.transform=(innerWidth>1000?'translateX(-50%) ':'')+'translateY('+(-p*40).toFixed(1)+'px)';}
 addEventListener('scroll',function(){if(!t)t=requestAnimationFrame(f)},{passive:true});addEventListener('resize',f);f();})();
