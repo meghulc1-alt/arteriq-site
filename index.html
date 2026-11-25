@@ -1349,6 +1349,23 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (max-width:1000px){.dive{display:block;min-height:0}.divebg{position:relative;inset:auto}.divebg picture,.divebg img{height:auto}.dive::after{background:linear-gradient(180deg,rgba(3,4,5,0) 45%,#030405 100%);height:calc(146vw);bottom:auto}.divew{margin-top:-38vw}.divet{padding:0 0 72px}}
 @media (max-width:1000px){.divet{max-width:100%}.diveh{font-size:clamp(34px,9vw,44px)}}
 @media (max-width:1000px){.divebtn{width:100%;max-width:100%;box-sizing:border-box;justify-content:center}}
+/* ===== underwater hero (dark photo, light type) ===== */
+.leapbx.hfull:has(.hbgd){background:#030405!important}
+.hfull .hbg.hbgd{top:69px!important;bottom:0!important}
+.hbgd picture,.hbgd img{width:100%;height:100%;display:block}
+.hfull .hbg.hbgd img{object-fit:cover!important;object-position:100% 50%!important;transform-origin:85% 50%!important}
+.hbgd::before{display:none!important}
+.hfull .hbg.hbgd::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,4,5,.55) 0%,rgba(3,4,5,.25) 45%,rgba(3,4,5,0) 65%),linear-gradient(180deg,rgba(3,4,5,0) 70%,rgba(3,4,5,.6) 100%)!important;height:auto!important;pointer-events:none}
+.hfull:has(.hbgd) .leaph{color:#FFFFFF!important;text-shadow:0 2px 24px rgba(0,0,0,.35)!important}
+.hfull:has(.hbgd) .leapfu{color:rgba(255,255,255,.86)!important;text-shadow:none!important}.hfull:has(.hbgd) .leapfu b{color:#FF8A6B!important}
+.hfull:has(.hbgd) .leaplead{color:rgba(255,255,255,.80)!important;text-shadow:none!important}.hfull:has(.hbgd) .leapb{color:#FFFFFF!important}
+.hfull:has(.hbgd) .btn-pri{background:#FFFFFF!important;color:#1F2333!important}.hfull:has(.hbgd) .btn-pri svg *{stroke:#1F2333!important}
+.hfull:has(.hbgd) .leapsec{background:rgba(255,255,255,.08)!important;color:#FFFFFF!important;border:1px solid rgba(255,255,255,.35)!important}
+.hfull:has(.hbgd) .leapeye{color:#FFB59A!important;background:transparent!important;border-color:rgba(255,181,154,.4)!important}
+@media (max-width:1000px){.hbgd picture,.hbgd img{height:auto}.hfull .hbg.hbgd img{object-position:50% 0!important}.hfull .hbg.hbgd::after{background:linear-gradient(180deg,rgba(3,4,5,0) 55%,#030405 100%)!important;height:146vw!important;bottom:auto!important}.leapbx.hfull:has(.hbgd){padding-top:calc(100vw + 40px)!important}}
+@media (min-width:1001px){.hfull:has(.hbgd) .leaptop,.hfull:has(.hbgd) .leapbot{align-self:flex-start!important;margin-right:0!important;margin-left:max(24px,calc((100vw - 1208px)/2))!important;width:min(560px,42vw)}.hfull:has(.hbgd) .leaph{font-size:clamp(40px,4vw,62px)!important}}
+@media (min-width:1001px) and (max-height:800px){.hfull:has(.hbgd) .leaptop{margin-top:-150px!important}}
+@media (max-width:1000px){.leapbx.hfull:has(.hbgd){padding-top:calc(118vw)!important}}
 
 [hidden]{display:none!important}
 </style>
@@ -1363,8 +1380,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapbx hfull" aria-label="An iced chocolate drink and an iced orange drink on marble, with Arter.IQ Orange and Chocolate sachets">
-<div class="hbg hbgc" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/hero-photo-m.webp"><img fetchpriority="high" decoding="async" src="images/hero-photo.webp" alt=""></picture><div class="hbgsh"></div></div>
+<section id="top" class="leap leapbx hfull" aria-label="A swimmer rising through deep blue water towards the sunlit surface">
+<div class="hbg hbgd" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/dive-m.webp"><img fetchpriority="high" decoding="async" src="images/dive.webp" alt=""></picture><div class="hbgsh"></div></div>
 <div class="leaptop rise">
 <p class="leapeye">Heart &amp; Artery Care</p>
 <h1 class="disp h1 leaph">Your daily dose of<br> Japanese heart care.</h1><p class="leapfu"><b>10,000 FU.</b> Made for Indian hearts.</p>
@@ -1385,7 +1402,6 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <div class="sheet">
 <section class="lit" aria-label="What the name means"><div class="litpin"><div class="wrap"><p class="mono" style="margin-bottom:22px">What’s in the name</p><p class="littx"><span class="lw">Arter</span> <span class="lw">is</span> <span class="lw">for</span> <span class="lw">your</span> <span class="lw">arteries.</span> <span class="lw lw2">IQ</span> <span class="lw lw2">is</span> <span class="lw lw2">for</span> <span class="lw lw2">knowing</span> <span class="lw lw2">your</span> <span class="lw lw2">numbers.</span></p><p class="litsub">Arter.IQ helps you know what’s really happening inside your arteries.</p></div></div></section>
 
-<section class="dive" aria-label="Below the surface"><div class="divebg" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/dive-m.webp"><img loading="lazy" decoding="async" src="images/dive.webp" alt=""></picture></div><div class="wrap divew"><div class="divet rise"><p class="divee">Below the surface</p><h2 class="diveh">Heart trouble starts where you <span>can’t see it.</span></h2><p class="divel">You can’t feel thicker blood or stiffening arteries. Protocol 60 lets you see them, with two blood tests and a specialist by your side.</p><a class="btn divebtn" href="journey.html">See your 60 days <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F2333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></section>
 <section id="why" class="sec why"><div class="whytop" aria-hidden="true"></div><img class="whybg" loading="lazy" decoding="async" src="images/bg-tree.webp" alt="" aria-hidden="true"><div class="wrap">
 <div class="whyhead rise"><p class="mono">Why it matters</p><h2 class="disp h2">Heart trouble comes <span class="whyem">earlier</span> in India.</h2><p class="lead">Heart disease is India’s biggest killer. Here, it often comes 10 years earlier than in the West, many times with no warning signs.</p></div>
 <div class="wsg"><div class="ws rise" style="transition-delay:0.0s"><p class="wsn">1<small>in</small><span class="cnt" style="--to:4"></span></p><p class="wsl"><b>deaths in India</b> is from heart disease</p></div><div class="ws rise" style="transition-delay:0.12s"><p class="wsn"><span class="cnt" style="--to:10"></span><small>yrs</small></p><p class="wsl"><b>earlier</b> than in the West</p></div><div class="ws rise" style="transition-delay:0.24s"><p class="wsn"><span class="cnt" style="--to:53"></span></p><p class="wsl"><b>average age</b> of a first heart attack</p></div></div>
