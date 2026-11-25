@@ -1237,6 +1237,23 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (max-width:1000px){.leapbx.hfull{padding-top:calc(min(142vw,740px))!important}.hfull .leapeye{display:none!important}}
 .hfull .leaph .grad{-webkit-text-fill-color:#FFD9CC!important;color:#FFD9CC!important;text-shadow:0 2px 30px rgba(90,10,10,.18)}
 @media (max-width:1000px){.hbg picture,.hbg img{height:auto!important}.hbg img{object-fit:contain}.leapbx.hfull{background:#AE3D3F!important}}
+/* hero copy v-japan */
+.leapfu{margin:14px 0 0;font-size:clamp(20px,1.9vw,28px);font-weight:300;letter-spacing:-.01em;color:#FFE2D8}
+.leapfu b{font-weight:600;color:#FFFFFF}
+@media (min-width:1001px){.hfull .leaph{font-size:clamp(44px,4.1vw,64px)!important}}
+/* transparent header over hero */
+body:has(.hfull) .hdr:not(.sc) .hbar{background:transparent!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+body:has(.hfull) .hdr:not(.sc) .logo{color:#FFFFFF!important}
+body:has(.hfull) .hdr:not(.sc) .ldesc{color:#FFFFFF!important;border-left-color:rgba(255,255,255,.4)!important}
+body:has(.hfull) .hdr:not(.sc) .hnav a{color:#FFFFFF!important;opacity:.92!important}
+body:has(.hfull) .hdr:not(.sc) .hnav a svg *{stroke:#FFFFFF}
+body:has(.hfull) .hdr:not(.sc) .hcta{background:#FFFFFF!important;color:#E63E3E!important}
+.hdr .hbar,.hdr .logo,.hdr .hnav a,.hdr .hcta{transition:background .4s,color .4s,box-shadow .4s,height .35s}
+.hbg::before{content:"";position:absolute;left:0;right:0;top:0;height:180px;z-index:1;background:linear-gradient(180deg,rgba(60,8,12,.42) 0%,rgba(60,8,12,.18) 50%,rgba(60,8,12,0) 100%);pointer-events:none}
+body:has(.hfull) .hdr:not(.sc) .hcta-i{background:#E63E3E!important}
+body:has(.hfull) .hdr:not(.sc) .hcta-i svg *{stroke:#FFFFFF!important}
+body:has(.hfull) .hdr:not(.sc) .logo,body:has(.hfull) .hdr:not(.sc) .hnav a,body:has(.hfull) .hdr:not(.sc) .ldesc{text-shadow:0 1px 14px rgba(60,8,12,.35)}
+@media (min-width:1001px){.hbg picture{transform:translateY(-6%)!important;height:106%!important}}
 
 [hidden]{display:none!important}
 </style>
