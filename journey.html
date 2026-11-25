@@ -1410,6 +1410,17 @@ body:has(.hbgd) .hdr:not(.sc) .ldesc{color:#FFB59A!important;border-left-color:r
 @media (max-width:1000px){.abyss{min-height:100vh}.abw{padding:90px 0 140px}.abh{font-size:clamp(36px,10vw,48px)}}
 @media (max-width:1000px){.abcells{top:12%}}
 .abcells{bottom:12%!important}
+/* swimmer sinking through the abyss */
+.abcells{display:none!important}
+.abswim{position:absolute;left:72%;top:0;width:clamp(90px,8vw,130px);z-index:1;pointer-events:none;mix-blend-mode:screen;
+ transform:translate(-50%,calc(var(--sp,0) * 78vh + 4vh)) scale(calc(1 - var(--sp,0) * .55));transform-origin:50% 50%;
+ opacity:calc(.9 - var(--sp,0) * var(--sp,0) * 1.1);filter:blur(calc(var(--sp,0) * 2.2px));will-change:transform,opacity}
+.abswim img{width:100%;height:auto;display:block}
+@media (max-width:1000px){.abswim{left:78%;width:64px;opacity:calc(.6 - var(--sp,0) * var(--sp,0) * .7)}}
+@media (prefers-reduced-motion:reduce){.abswim{transform:translate(-50%,20vh) scale(.8)}}
+.abswim{left:80%;opacity:calc(.95 - var(--sp,0) * var(--sp,0) * var(--sp,0) * 1.15);transform:translate(-50%,calc(var(--sp,0) * 82vh + 2vh)) scale(calc(1 - var(--sp,0) * .5))}
+@media (max-width:1000px){.abswim{left:82%;opacity:calc(.55 - var(--sp,0) * var(--sp,0) * .6)}}
+@media (max-width:1000px){.abswim{width:74px;opacity:calc(.8 - var(--sp,0) * var(--sp,0) * .85)}}
 
 [hidden]{display:none!important}
 </style>
