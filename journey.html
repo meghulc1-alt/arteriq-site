@@ -1386,6 +1386,30 @@ body:has(.hbgd) .hdr:not(.sc) .ldesc{color:#FFB59A!important;border-left-color:r
 .hfull:has(.hbgd) .leapbot{margin-top:22px}@media (max-width:1000px){.hfull:has(.hbgd) .leapbot{margin-top:16px}}
 /* blue sea, swimmer left */
 .hfull .hbg.hbgd img{object-position:60% 50%!important;transform-origin:60% 50%!important}
+/* ===== abyss: blue water sinks into red blood ===== */
+.hfull .hbg.hbgd img{filter:brightness(calc(1 - var(--dk,0) * .55)) saturate(calc(1 - var(--dk,0) * .3))}
+.abyss{position:relative;overflow:hidden;min-height:115vh;display:flex;align-items:center;color:#FFFFFF;
+ background:linear-gradient(180deg,#030405 0%,#050407 14%,#120509 30%,#2E070C 46%,#5C0E14 62%,#981D22 78%,#D23B3E 91%,#EE5452 100%)}
+.abcells{position:absolute;inset:0;pointer-events:none}
+.cell{position:absolute;border-radius:50%;transform:rotate(var(--r)) scaleY(.82);
+ background:radial-gradient(closest-side,#7E1418 0%,#9C1C21 30%,#C8312F 58%,#E2504A 80%,#C8312F 92%,rgba(200,49,47,0) 100%);
+ box-shadow:inset 0 0 6px rgba(255,180,170,.25),0 6px 18px rgba(40,0,4,.35);animation:cellfloat 14s ease-in-out infinite}
+@keyframes cellfloat{0%{translate:0 0}50%{translate:14px -38px}100%{translate:0 0}}
+@media (prefers-reduced-motion:reduce){.cell{animation:none}}
+.abw{position:relative;z-index:2;text-align:center;padding:120px 0 200px}
+.abe{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:rgba(160,200,215,.75);margin:0 0 22px}
+.abh{font-size:clamp(40px,5vw,76px);line-height:1.04;letter-spacing:-.025em;font-weight:300;margin:0 auto 24px;max-width:15ch;color:#FFFFFF}
+.abh span{color:#FF6B5E}
+.abl{font-size:clamp(17px,1.4vw,21px);line-height:1.6;color:rgba(255,255,255,.72);max-width:44ch;margin:0 auto}
+.abline{display:block;width:1px;height:110px;margin:56px auto 0;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0))}
+/* sheet + why sit flush under the abyss */
+.abyss + script + .sheet,.abyss ~ .sheet{margin-top:0!important;border-radius:0!important;box-shadow:none!important;background:#EE5452}
+.abyss ~ .sheet > .why:first-child{margin:0!important;border-radius:0!important}
+.abyss ~ .sheet > .why:first-child .whytop{display:block!important;height:220px;background:linear-gradient(180deg,#EE5452 0%,rgba(238,84,82,0) 100%)!important}
+.abyss ~ .sheet > section:not(.why){background-color:#FFFFFF}
+@media (max-width:1000px){.abyss{min-height:100vh}.abw{padding:90px 0 140px}.abh{font-size:clamp(36px,10vw,48px)}}
+@media (max-width:1000px){.abcells{top:12%}}
+.abcells{bottom:12%!important}
 
 [hidden]{display:none!important}
 </style>
