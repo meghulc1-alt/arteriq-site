@@ -1333,6 +1333,22 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (min-width:1001px){.hfull:has(.hbgc) .leaptop,.hfull:has(.hbgc) .leapbot{align-self:flex-end!important;margin-left:0!important;margin-right:max(24px,calc((100vw - 1208px)/2))!important;width:min(460px,33vw)}.hfull:has(.hbgc) .leaptop{margin-top:-40px!important}.hfull:has(.hbgc) .leaph{font-size:clamp(40px,3.7vw,58px)!important}}
 @media (max-width:1000px){.hbgc picture,.hbgc img{height:auto}.hbgc img{object-position:0 0}.hfull .hbg.hbgc::after{background:linear-gradient(180deg,rgba(220,221,224,0) 70%,#DCDDE0 100%)!important}.leapbx.hfull:has(.hbgc){padding-top:calc(100vw + 100px)!important}}
 @media (min-width:1001px) and (max-height:800px){.hfull:has(.hbgc) .leaptop{margin-top:-170px!important}}
+/* ===== dive section (dark photo, light type) ===== */
+.dive{position:relative;overflow:hidden;background:#030405;color:#FFFFFF;min-height:min(92vh,860px);display:flex;align-items:center}
+.divebg{position:absolute;inset:0}.divebg picture,.divebg img{width:100%;height:100%;display:block}
+.divebg img{object-fit:cover;object-position:100% 50%}
+.dive::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,4,5,.55) 0%,rgba(3,4,5,.25) 45%,rgba(3,4,5,0) 65%);pointer-events:none}
+.divew{position:relative;z-index:1;width:100%;box-sizing:border-box}
+.divet{max-width:560px;padding:120px 0}
+.divee{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#FFB59A;margin:0 0 20px}
+.diveh{font-size:clamp(38px,4.4vw,64px);line-height:1.06;letter-spacing:-.02em;font-weight:400;color:#FFFFFF;margin:0 0 22px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.diveh span{color:#FF8A6B}
+.divel{font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 34px;max-width:470px}
+.divebtn{background:#FFFFFF!important;color:#1F2333!important;border:0!important;min-height:52px}
+.divebtn:hover{background:#FFE9E1!important}
+@media (max-width:1000px){.dive{display:block;min-height:0}.divebg{position:relative;inset:auto}.divebg picture,.divebg img{height:auto}.dive::after{background:linear-gradient(180deg,rgba(3,4,5,0) 45%,#030405 100%);height:calc(146vw);bottom:auto}.divew{margin-top:-38vw}.divet{padding:0 0 72px}}
+@media (max-width:1000px){.divet{max-width:100%}.diveh{font-size:clamp(34px,9vw,44px)}}
+@media (max-width:1000px){.divebtn{width:100%;max-width:100%;box-sizing:border-box;justify-content:center}}
 
 [hidden]{display:none!important}
 </style>
@@ -1369,6 +1385,7 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <div class="sheet">
 <section class="lit" aria-label="What the name means"><div class="litpin"><div class="wrap"><p class="mono" style="margin-bottom:22px">What’s in the name</p><p class="littx"><span class="lw">Arter</span> <span class="lw">is</span> <span class="lw">for</span> <span class="lw">your</span> <span class="lw">arteries.</span> <span class="lw lw2">IQ</span> <span class="lw lw2">is</span> <span class="lw lw2">for</span> <span class="lw lw2">knowing</span> <span class="lw lw2">your</span> <span class="lw lw2">numbers.</span></p><p class="litsub">Arter.IQ helps you know what’s really happening inside your arteries.</p></div></div></section>
 
+<section class="dive" aria-label="Below the surface"><div class="divebg" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/dive-m.webp"><img loading="lazy" decoding="async" src="images/dive.webp" alt=""></picture></div><div class="wrap divew"><div class="divet rise"><p class="divee">Below the surface</p><h2 class="diveh">Heart trouble starts where you <span>can’t see it.</span></h2><p class="divel">You can’t feel thicker blood or stiffening arteries. Protocol 60 lets you see them, with two blood tests and a specialist by your side.</p><a class="btn divebtn" href="journey.html">See your 60 days <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F2333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></section>
 <section id="why" class="sec why"><div class="whytop" aria-hidden="true"></div><img class="whybg" loading="lazy" decoding="async" src="images/bg-tree.webp" alt="" aria-hidden="true"><div class="wrap">
 <div class="whyhead rise"><p class="mono">Why it matters</p><h2 class="disp h2">Heart trouble comes <span class="whyem">earlier</span> in India.</h2><p class="lead">Heart disease is India’s biggest killer. Here, it often comes 10 years earlier than in the West, many times with no warning signs.</p></div>
 <div class="wsg"><div class="ws rise" style="transition-delay:0.0s"><p class="wsn">1<small>in</small><span class="cnt" style="--to:4"></span></p><p class="wsl"><b>deaths in India</b> is from heart disease</p></div><div class="ws rise" style="transition-delay:0.12s"><p class="wsn"><span class="cnt" style="--to:10"></span><small>yrs</small></p><p class="wsl"><b>earlier</b> than in the West</p></div><div class="ws rise" style="transition-delay:0.24s"><p class="wsn"><span class="cnt" style="--to:53"></span></p><p class="wsl"><b>average age</b> of a first heart attack</p></div></div>
