@@ -1201,6 +1201,42 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 @media (max-width:1000px){.hbox.hrit{position:relative!important;width:100%!important;max-width:420px!important;aspect-ratio:987/1100!important;margin:6px auto 10px!important;transform:none!important;right:auto!important}.hritc{border-radius:26px}}
 @media (prefers-reduced-motion:reduce){.hritc{animation:none}}
 @media (min-width:1001px){.hbox.hrit{height:min(calc(100vh - 300px),620px)!important;width:auto!important;top:92px!important;transform:none!important}}
+/* ===== full-bleed hero ===== */
+.leapbx.hfull{background:#D9484A!important;min-height:100vh!important}
+.leapbx.hfull::before{display:none!important}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hbg picture,.hbg img{display:block;width:100%;height:100%}
+.hbg img{object-fit:cover;object-position:0% 50%;transform-origin:30% 60%;will-change:transform;animation:hbgin 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes hbgin{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:none}}
+.hbgsh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(70,10,14,.15),rgba(70,10,14,.75));opacity:0;pointer-events:none}
+.hfull .leaptop,.hfull .leapbot{position:relative;z-index:2}
+.hfull .leaph{color:#FFFFFF!important}
+.hfull .leaph .grad{background:none!important;-webkit-text-fill-color:#FFE2D8!important;color:#FFE2D8!important}
+.hfull .leaplead{color:rgba(255,255,255,.88)!important}
+.hfull .leapb{color:#FFFFFF!important}
+.hfull .leapeye{color:#FFFFFF!important;background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.35)!important}
+.hfull .btn-pri{background:#FFFFFF!important;color:#E63E3E!important;box-shadow:0 18px 40px -18px rgba(80,10,10,.55)!important}
+.hfull .btn-pri svg *{stroke:#E63E3E!important}
+.hfull .leapsec{background:rgba(255,255,255,.08)!important;color:#FFFFFF!important;border:1px solid rgba(255,255,255,.6)!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.hfull .leapsec:hover{background:rgba(255,255,255,.2)!important}
+.hfull .prf{background:rgba(255,255,255,.78)!important;z-index:3}
+@media (min-width:1001px){
+ .hfull .leaptop,.hfull .leapbot{align-self:flex-end!important;margin-left:0!important;margin-right:max(24px,calc((100vw - 1208px)/2))!important;width:min(560px,44vw);max-width:none!important}
+ .hfull .leaptop{margin-top:-140px!important}
+ .hfull .leaph{font-size:clamp(46px,4.4vw,68px)!important}
+}
+@media (max-width:1000px){
+ .leapbx.hfull{justify-content:flex-end!important;padding:calc(min(108vw,560px)) 20px 0!important;min-height:0!important}
+ .hbg img{object-position:50% 0%}
+ .hfull .leaptop{margin-top:0!important}
+ .hfull .prf{margin-top:26px!important;background:rgba(255,255,255,.82)!important}
+}
+.hdr .hbar{background:rgba(255,255,255,.96)!important}
+.leapbx.hfull{background:#A9393B!important}
+@media (min-width:1001px){.hbg img{object-position:0% 0%}.hbg picture{transform:translateY(-11%);height:111%}}
+@media (max-width:1000px){.leapbx.hfull{padding-top:calc(min(142vw,740px))!important}.hfull .leapeye{display:none!important}}
+.hfull .leaph .grad{-webkit-text-fill-color:#FFD9CC!important;color:#FFD9CC!important;text-shadow:0 2px 30px rgba(90,10,10,.18)}
+@media (max-width:1000px){.hbg picture,.hbg img{height:auto!important}.hbg img{object-fit:contain}.leapbx.hfull{background:#AE3D3F!important}}
 
 [hidden]{display:none!important}
 </style>
@@ -1215,8 +1251,8 @@ a{color:#4A5163}a:hover{color:#E63E3E}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapbx">
-<div class="hbox hrit"><figure class="hritc"><img fetchpriority="high" decoding="async" src="images/ritual-orange.webp" alt="An Arter.IQ Orange sachet being poured into a glass of water"><figcaption><span class="ritdot"></span>Orange · one sachet a day</figcaption></figure></div>
+<section id="top" class="leap leapbx hfull" aria-label="An Arter.IQ Orange sachet being poured into a glass of water">
+<div class="hbg" aria-hidden="true"><picture><source media="(max-width:1000px)" srcset="images/hero-bg-tall.webp"><img fetchpriority="high" decoding="async" src="images/hero-bg-wide.webp" alt=""></picture><div class="hbgsh"></div></div>
 <div class="leaptop rise">
 <p class="leapeye">Heart &amp; Artery Care</p>
 <h1 class="disp h1 leaph">The <span class="grad">missing piece</span><br> your heart needs.</h1>
@@ -1456,6 +1492,10 @@ var M=[['Good habits. Now make sure.','Your answers look reassuring. But only a 
 box.querySelectorAll('.hq').forEach(function(q){q.querySelectorAll('.hqb').forEach(function(b){b.addEventListener('click',function(){q.querySelectorAll('.hqb').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');ans[q.dataset.q]=+b.dataset.v;
 var k=Object.keys(ans);if(k.length<4){H.textContent=(4-k.length)+(4-k.length===1?' question':' questions')+' to go.';return;}
 var t=k.reduce(function(a,x){return a+ans[x]},0),i=t<=2?0:(t<=5?1:2);H.textContent=M[i][0];P.textContent=M[i][1];R.classList.add('done');});});});})();
+(function(){var h=document.querySelector('.hfull');if(!h)return;var im=h.querySelector('.hbg img'),sh=h.querySelector('.hbgsh'),pr=h.querySelector('.prf');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=0;
+function f(){t=0;var p=Math.max(0,Math.min(1,scrollY/(h.offsetHeight||innerHeight)));im.style.transform='translate3d(0,'+(p*7).toFixed(2)+'%,0) scale('+(1+p*.14).toFixed(4)+')';sh.style.opacity=(p*.55).toFixed(3);if(pr)pr.style.transform=(innerWidth>1000?'translateX(-50%) ':'')+'translateY('+(-p*40).toFixed(1)+'px)';}
+addEventListener('scroll',function(){if(!t)t=requestAnimationFrame(f)},{passive:true});addEventListener('resize',f);f();})();
 var fq=document.querySelectorAll('[data-fq]');
 fq.forEach(function(b){b.addEventListener('click',function(){var i=b.getAttribute('data-fq');var open=b.getAttribute('aria-expanded')==='true';
  fq.forEach(function(x){x.setAttribute('aria-expanded','false');x.querySelector('.fqi').classList.remove('open');});
