@@ -1374,6 +1374,15 @@ body:has(.hbgd) .hdr:not(.sc) .hnav a{color:#FFFFFF!important;opacity:.9!importa
 body:has(.hbgd) .hdr:not(.sc) .ldesc{color:#FFB59A!important;border-left-color:rgba(255,255,255,.3)!important}
 .hdr .hbar{transition:background .35s,box-shadow .35s,height .35s}
 .hfull .hbg.hbgd::before{content:"";display:block!important;position:absolute;left:0;right:0;top:0;height:160px;background:linear-gradient(180deg,rgba(3,4,5,.45),rgba(3,4,5,0));z-index:1;pointer-events:none}
+/* surface headline */
+.hfull .leaph .leapacc{color:#FF8A6B}
+.leapkick{margin:18px 0 0;font-size:clamp(20px,1.7vw,26px);font-weight:300;line-height:1.35;color:#FFFFFF;letter-spacing:-.01em}
+.hfull:has(.hbgd) .leapfu{font-size:clamp(17px,1.3vw,20px)!important;margin-top:10px!important}
+@media (min-width:1001px){.hfull:has(.hbgd) .leaptop,.hfull:has(.hbgd) .leapbot{width:min(600px,46vw)}}
+@media (max-width:1000px){.leapkick{font-size:19px;margin-top:12px}.leapbx.hfull:has(.hbgd){padding-top:calc(108vw)!important}}
+.hfull .leaph .leapacc{display:block}
+.hfull:has(.hbgd) .leaph{white-space:normal!important;max-width:none}
+@media (max-width:1000px){.leapkick{font-size:17.5px}.leapbx.hfull:has(.hbgd){padding-top:calc(100vw)!important}}
 
 [hidden]{display:none!important}
 </style>
