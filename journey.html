@@ -1421,6 +1421,22 @@ body:has(.hbgd) .hdr:not(.sc) .ldesc{color:#FFB59A!important;border-left-color:r
 .abswim{left:80%;opacity:calc(.95 - var(--sp,0) * var(--sp,0) * var(--sp,0) * 1.15);transform:translate(-50%,calc(var(--sp,0) * 82vh + 2vh)) scale(calc(1 - var(--sp,0) * .5))}
 @media (max-width:1000px){.abswim{left:82%;opacity:calc(.55 - var(--sp,0) * var(--sp,0) * .6)}}
 @media (max-width:1000px){.abswim{width:74px;opacity:calc(.8 - var(--sp,0) * var(--sp,0) * .85)}}
+/* ===== horse hero: golden light, text on the right ===== */
+.leapbx.hfull:has(.hbgh){background:#1E1914!important}
+.hfull .hbg.hbgh img{object-position:35% 50%!important;transform-origin:35% 55%!important;filter:none!important}
+.hfull .hbg.hbgh::after{background:linear-gradient(270deg,rgba(18,14,10,.72) 0%,rgba(18,14,10,.45) 34%,rgba(18,14,10,0) 58%),linear-gradient(180deg,rgba(18,14,10,0) 72%,rgba(18,14,10,.55) 100%)!important}
+.hfull .hbg.hbgh::before{background:linear-gradient(180deg,rgba(18,14,10,.5),rgba(18,14,10,0))!important}
+.hfull:has(.hbgh) .leaph .leapacc{color:#F6C77A}
+.hfull:has(.hbgh) .leapeye{color:#F6C77A!important}
+body:has(.hbgh) .hdr:not(.sc) .ldesc{color:#F6C77A!important}
+@media (min-width:1001px){.hfull:has(.hbgh) .leaptop,.hfull:has(.hbgh) .leapbot{align-self:flex-end!important;margin-left:0!important;margin-right:max(24px,calc((100vw - 1208px)/2))!important;width:min(540px,40vw)}}
+@media (max-width:1000px){.hfull .hbg.hbgh img{object-position:50% 0!important}.hfull .hbg.hbgh::after{background:linear-gradient(180deg,rgba(30,25,20,0) 55%,#1E1914 100%)!important;height:123vw!important}.leapbx.hfull:has(.hbgh){padding-top:calc(104vw)!important}}
+.hfull .hbg.hbgh{background:#1E1914!important}
+.hfull .hbg.hbgh img{object-position:18% 50%!important;transform-origin:18% 55%!important}
+.hfull .hbg.hbgh::after{background:linear-gradient(270deg,rgba(18,14,10,.8) 0%,rgba(18,14,10,.55) 36%,rgba(18,14,10,0) 60%),linear-gradient(180deg,rgba(18,14,10,0) 72%,rgba(18,14,10,.6) 100%)!important}
+@media (max-width:1000px){.hfull .hbg.hbgh::after{background:linear-gradient(180deg,rgba(30,25,20,0) 55%,#1E1914 100%)!important}}
+@media (min-width:1001px){.hfull:has(.hbgh) .leaptop,.hfull:has(.hbgh) .leapbot{width:min(470px,34vw)}.hfull:has(.hbgh) .leaph{font-size:clamp(40px,3.6vw,58px)!important}.hfull:has(.hbgh) .leapkick,.hfull:has(.hbgh) .leaplead{text-shadow:0 1px 14px rgba(0,0,0,.5)}}
+@media (max-width:1000px){.hfull .hbg.hbgh::after{background:linear-gradient(180deg,rgba(30,25,20,0) 40%,rgba(30,25,20,.6) 75%,#1E1914 99%)!important}}
 
 [hidden]{display:none!important}
 </style>
