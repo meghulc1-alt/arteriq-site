@@ -1482,6 +1482,13 @@ body:has(.hbgk) .hdr:not(.sc) .ldesc{color:#F3DCC4!important}
 .hfull .hbg.hbga::after{background:linear-gradient(180deg,rgba(26,17,12,0) 80%,rgba(26,17,12,.45) 100%)!important}
 .hfull:has(.hbga) .leaptop,.hfull:has(.hbga) .leapbot{width:min(520px,40vw)}}
 @media (max-width:1000px){.hfull .hbg.hbga::after{height:150.5vw!important;background:linear-gradient(180deg,rgba(42,27,20,0) 55%,rgba(42,27,20,.65) 85%,#2A1B14 100%)!important}.leapbx.hfull:has(.hbga){padding-top:calc(128vw)!important}.leapbx.hfull:has(.hbga){background:#2A1B14!important}}
+/* anchor: full-bleed original */
+@media (min-width:1001px){
+.hfull .hbg.hbga picture{display:block!important;height:100%}
+.hfull .hbg.hbga img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 30%!important;-webkit-mask-image:none;mask-image:none;transform-origin:50% 30%!important}
+.hfull .hbg.hbga::after{background:linear-gradient(90deg,rgba(26,17,12,.82) 0%,rgba(26,17,12,.6) 32%,rgba(26,17,12,.1) 55%,rgba(26,17,12,0) 70%),linear-gradient(180deg,rgba(26,17,12,0) 75%,rgba(26,17,12,.5) 100%)!important}}
+@media (min-width:1001px){.hfull .hbg.hbga img{object-position:50% 20%!important;transform-origin:50% 20%!important}
+.hfull .hbg.hbga::after{background:linear-gradient(90deg,rgba(26,17,12,.88) 0%,rgba(26,17,12,.72) 30%,rgba(26,17,12,.25) 46%,rgba(26,17,12,0) 58%),linear-gradient(180deg,rgba(26,17,12,0) 75%,rgba(26,17,12,.5) 100%)!important}}
 
 [hidden]{display:none!important}
 </style>
