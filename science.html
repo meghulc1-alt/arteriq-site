@@ -1515,6 +1515,18 @@ body:has(.hbgv) .sheet > .why:first-child{margin:0!important;border-radius:32px 
 body:has(.hbgv) .sheet > section:not(.why),body:has(.hbgv) .sheet > div{background-color:#FFFFFF}
 @media (max-width:1000px){body:has(.hbgv) .sheet > .why:first-child{border-radius:24px 24px 0 0!important}}
 .leapcp{display:block;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#9FD3E2;margin:0 0 8px}
+/* chain hero: warm-on-cool colour system */
+.leaptag{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:7px 14px 7px 12px;border-radius:999px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#FFD2C8;background:rgba(255,107,90,.12);border:1px solid rgba(255,140,120,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.leaptag i{width:7px;height:7px;border-radius:50%;background:#FF6B5A;box-shadow:0 0 0 4px rgba(255,107,90,.25);animation:tagpulse 1.6s ease-in-out infinite}
+@keyframes tagpulse{0%,100%{box-shadow:0 0 0 3px rgba(255,107,90,.3)}50%{box-shadow:0 0 0 7px rgba(255,107,90,0)}}
+.hfull:has(.hbgv) .leaph .leapmute{color:#FFFFFF!important;font-weight:300}
+.hfull:has(.hbgv) .leaph .leapacc{color:#FF6B5A!important;font-weight:600;text-shadow:0 0 40px rgba(255,90,70,.35)}
+.hfull:has(.hbgv) .leapkick{color:rgba(255,255,255,.9)!important}
+.hfull:has(.hbgv) .leaplead{color:rgba(225,238,242,.78)!important}
+.hfull:has(.hbgv) .leapfu2{color:#FFFFFF!important;font-weight:700;background:linear-gradient(transparent 62%,rgba(255,107,90,.55) 62%,rgba(255,107,90,.55) 92%,transparent 92%);padding:0 2px}
+body:has(.hbgv) .hdr:not(.sc) .ldesc{color:#FFB3A6!important}
+@media (prefers-reduced-motion:reduce){.leaptag i{animation:none}}
+.hfull:has(.hbgv) .leapfu2{background:none!important;padding:0;color:#FF8A7A!important}
 
 [hidden]{display:none!important}
 </style>
