@@ -1489,6 +1489,31 @@ body:has(.hbgk) .hdr:not(.sc) .ldesc{color:#F3DCC4!important}
 .hfull .hbg.hbga::after{background:linear-gradient(90deg,rgba(26,17,12,.82) 0%,rgba(26,17,12,.6) 32%,rgba(26,17,12,.1) 55%,rgba(26,17,12,0) 70%),linear-gradient(180deg,rgba(26,17,12,0) 75%,rgba(26,17,12,.5) 100%)!important}}
 @media (min-width:1001px){.hfull .hbg.hbga img{object-position:50% 20%!important;transform-origin:50% 20%!important}
 .hfull .hbg.hbga::after{background:linear-gradient(90deg,rgba(26,17,12,.88) 0%,rgba(26,17,12,.72) 30%,rgba(26,17,12,.25) 46%,rgba(26,17,12,0) 58%),linear-gradient(180deg,rgba(26,17,12,0) 75%,rgba(26,17,12,.5) 100%)!important}}
+/* ===== chain video hero + smooth hand-off ===== */
+.leapbx.hfull:has(.hbgv),.hfull .hbg.hbgv{background:#071318!important}
+.hfull .hbg.hbgv .hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform-origin:50% 60%;will-change:transform}
+.hfull .hbg.hbgv::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+ linear-gradient(90deg,rgba(5,14,18,.86) 0%,rgba(5,14,18,.66) 30%,rgba(5,14,18,.2) 52%,rgba(5,14,18,0) 66%),
+ linear-gradient(180deg,rgba(5,14,18,.35) 0%,rgba(5,14,18,0) 20%,rgba(5,14,18,0) 62%,rgba(7,19,24,.92) 94%,#071318 100%)!important}
+.hfull .hbg.hbgv::before{display:none!important}
+.hfull .hbg.hbgv .hbgsh{z-index:2;background:#071318!important}
+.hfull:has(.hbgv) .leaph .leapmute{color:rgba(196,222,230,.7)!important}
+.hfull:has(.hbgv) .leaph .leapacc{color:#FFFFFF!important;text-shadow:0 0 34px rgba(140,210,235,.22)}
+.hfull:has(.hbgv) .leapkick{color:#D6E6EA!important}
+body:has(.hbgv) .hdr:not(.sc) .ldesc{color:#BFE0EA!important}
+/* the red sheet rises out of the dark water */
+body:has(.hbgv){background:#071318}
+body:has(.hbgv) .aq{background:#071318!important}
+body:has(.hbgv) .sheet{position:relative;margin-top:-1px;box-shadow:0 -30px 80px rgba(0,0,0,.45)!important}
+@media (min-width:1001px){.hfull:has(.hbgv) .leaptop,.hfull:has(.hbgv) .leapbot{width:min(500px,38vw)}.hfull:has(.hbgv) .leapkick{max-width:440px}}
+@media (max-width:1000px){.hfull .hbg.hbgv{position:absolute!important;top:0;left:0;right:0;height:132vw!important;bottom:auto!important}
+ .hfull .hbg.hbgv::after{background:linear-gradient(180deg,rgba(5,14,18,.4) 0%,rgba(5,14,18,0) 22%,rgba(5,14,18,.15) 55%,rgba(7,19,24,.85) 85%,#071318 100%)!important;height:100%!important}
+ .leapbx.hfull:has(.hbgv){padding-top:calc(104vw)!important}}
+@media (prefers-reduced-motion:reduce){.hvid{display:none}.hfull .hbg.hbgv{background:#071318 center/cover no-repeat}}
+body:has(.hbgv) .sheet{background:transparent!important;box-shadow:none!important;border-radius:0!important}
+body:has(.hbgv) .sheet > .why:first-child{margin:0!important;border-radius:32px 32px 0 0!important;box-shadow:0 -24px 70px rgba(0,0,0,.5)}
+body:has(.hbgv) .sheet > section:not(.why),body:has(.hbgv) .sheet > div{background-color:#FFFFFF}
+@media (max-width:1000px){body:has(.hbgv) .sheet > .why:first-child{border-radius:24px 24px 0 0!important}}
 
 [hidden]{display:none!important}
 </style>
