@@ -1697,6 +1697,30 @@ body:has(.hbgf) .why .whytop{display:none!important}
  .hdr.dk .hbar{background:rgba(26,3,6,.55)!important;-webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important;box-shadow:none!important}
  .hdr.dk .logo{color:#FFFFFF!important}
 }
+/* ===== Why it happens: line illustrations ===== */
+.plart{margin:-8px -8px 22px;border-radius:20px;background:linear-gradient(165deg,#FBF6F3 0%,#F4E9E5 100%);border:1px solid rgba(122,22,34,.07);overflow:hidden;aspect-ratio:280/170}
+.plsvg{display:block;width:100%;height:100%}
+.plsvg .drift{animation:pldrift 6s ease-in-out infinite}
+.plsvg .drift2{animation:pldrift2 5s linear infinite}
+.plsvg .mesh{animation:plmesh 4s ease-in-out infinite}
+.plsvg .snap{animation:plsnap 5s ease-in-out infinite}
+.plsvg .ecg{stroke-dasharray:420;stroke-dashoffset:420;animation:plecg 3.2s cubic-bezier(.4,0,.2,1) infinite}
+.plsvg .beat{transform-origin:140px 80px;animation:plbeat 1.6s ease-in-out infinite}
+.plsvg .enso{transform-origin:140px 82px;animation:plenso 24s linear infinite}
+.plsvg .enz{animation:plenz 5s ease-in-out infinite}
+@keyframes pldrift{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@keyframes pldrift2{0%{transform:translateX(-6px);opacity:.4}20%{opacity:1}100%{transform:translateX(26px);opacity:.9}}
+@keyframes plmesh{0%,100%{opacity:.45}50%{opacity:.7}}
+@keyframes plsnap{0%,30%{opacity:.85;transform:none}70%,100%{opacity:.25;transform:translateX(-4px)}}
+@keyframes plecg{0%{stroke-dashoffset:420}60%,100%{stroke-dashoffset:0}}
+@keyframes plbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.045)}24%{transform:scale(1)}36%{transform:scale(1.03)}}
+@keyframes plenso{to{transform:rotate(360deg)}}
+@keyframes plenz{0%,100%{transform:translate(0,0)}50%{transform:translate(-4px,5px)}}
+@media (prefers-reduced-motion:reduce){.plsvg *{animation:none!important;stroke-dashoffset:0!important}}
+.pl:has(.plart) .plh{margin-top:12px!important}
+.pl:has(.plart) .pln{margin-top:2px}
+.plart{aspect-ratio:260/146}
+.plsvg .beat{transform-origin:140px 80px}
 
 [hidden]{display:none!important}
 </style>
