@@ -1658,6 +1658,13 @@ body:has(.sci-hero) .hdr:not(.sc) .ldesc,body:has(.jhero) .hdr:not(.sc) .ldesc{c
 /* bright blood-cell artwork -> wine */
 img[src*="fibrin"]{filter:saturate(.75) brightness(.62) contrast(1.08)}
 @media (max-width:1000px){.sci-hero{padding:130px 0 72px!important}.jhero{padding:120px 0 64px}.jpage .jrn{padding-top:56px!important}}
+/* hero headline legibility: no clipped glow, darker veil behind text */
+.hfull:has(.hbgf) .leaph,.hfull:has(.hbgf) .leaph .leapacc,.hfull:has(.hbgf) .leaph .leapmute{text-shadow:none!important}
+.hfull .hbg.hbgf::after{background:
+ radial-gradient(58% 46% at 50% 40%,rgba(20,2,5,.78) 0%,rgba(20,2,5,.6) 45%,rgba(20,2,5,.25) 78%,rgba(20,2,5,0) 100%),
+ linear-gradient(180deg,rgba(20,2,5,.45) 0%,rgba(20,2,5,.1) 18%,rgba(20,2,5,.1) 70%,rgba(26,3,6,.9) 96%,#1A0306 100%)!important}
+@media (max-width:1000px){.hfull .hbg.hbgf::after{background:radial-gradient(95% 50% at 50% 38%,rgba(20,2,5,.75) 0%,rgba(20,2,5,.45) 60%,rgba(20,2,5,.1) 100%),linear-gradient(180deg,rgba(20,2,5,.4) 0%,rgba(20,2,5,0) 20%,rgba(20,2,5,0) 60%,rgba(26,3,6,.92) 92%,#1A0306 100%)!important}}
+.hfull:has(.hbgf) .leaph .sw{overflow:visible!important}
 
 [hidden]{display:none!important}
 </style>
