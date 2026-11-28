@@ -171,6 +171,13 @@ section{position:relative}
 .ff b{font:400 44px/1 var(--serif);color:var(--wine2)}
 .ff span{font-size:15.5px;color:var(--ink2)}
 @media (max-width:1000px){.ff div{grid-template-columns:96px 1fr;gap:16px}.ff b{font-size:34px}}
+.beat{margin:34px 0 34px;padding:28px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);position:relative;padding-left:34px}
+.beat p{font:400 clamp(22px,2vw,28px)/1.35 var(--serif);color:var(--ink);margin:0 0 8px!important;max-width:none!important}
+.beat b{font-weight:400;color:var(--wine2);font-variant-numeric:tabular-nums;}
+.beat small{font-size:13px;color:var(--mute);letter-spacing:.02em}
+.bdot{position:absolute;left:4px;top:40px;width:10px;height:10px;border-radius:50%;background:var(--wine2)}
+.bdot.on{animation:bt .6s ease-out}
+@keyframes bt{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(122,22,34,.45)}30%{transform:scale(1.5)}100%{transform:scale(1);box-shadow:0 0 0 14px rgba(122,22,34,0)}}
 /* honest */
 .hon{background:var(--bone)}
 .honh{display:grid;grid-template-columns:5fr 7fr;gap:6vw;margin-bottom:70px;align-items:end}
@@ -352,17 +359,12 @@ section{position:relative}
 
 <section class="ch fnd" id="about"><div class="w">
 <div class="glb rv"><img loading="lazy" src="images/globe-india.svg" alt="A globe with India highlighted"></div>
-<div class="letter rv"><p class="chn">V.</p><p class="lab">A note from our founders</p>
-<h2 class="ser h2">Indian hearts <em>deserve the best.</em></h2>
-<p class="first">Because Indian hearts carry more, and start carrying it sooner.</p>
-<div class="ff">
-<div><b>29</b><span>India’s median age. One of the youngest nations on earth, and its hearts are working from day one.</span></div>
-<div><b>51%</b><span>of India’s workforce puts in 49+ hours a week, the second-highest share in the world.</span></div>
-<div><b>10 yrs</b><span>earlier. That’s how much sooner heart attacks tend to strike Indians than people in the West.</span></div>
-</div>
-<p>We made Arter.IQ for the people carrying all of that: our parents, our partners, ourselves. Japan’s nattokinase, made in India at 10,000 FU, with two blood tests to show you what it does.</p>
-<p class="src" style="margin:0 0 8px;font-size:12px;line-height:1.6">UN World Population Prospects 2024; ILO, Working Time and Work-Life Balance Around the World, 2024; Prabhakaran D et al., Circulation, 2016.</p>
-<p class="sign">From our family to yours.<span>The founders, Arter.IQ · Made in India</span></p>
+<div class="letter rv"><p class="chn">V.</p><p class="lab">Why we started Arter.IQ</p>
+<h2 class="ser h2">Who looks after <em>the heart that looks after everyone?</em></h2>
+<div class="beat"><span class="bdot" aria-hidden="true"></span><p>Since you opened this page, your heart has beaten about <b id="beats">0</b> times.</p><small>Around 100,000 times a day. It has never taken a day off.</small></div>
+<p class="first">It was there for every exam, every late night, every early flight, every wedding.</p>
+<p>In India, that heart starts carrying the load young, works some of the longest hours in the world, and too often gives way ten years early. We built Arter.IQ to give something back: Japan’s nattokinase, made in India at 10,000 FU, with two blood tests so you can see the difference.</p>
+<p class="sign">For the hardest-working heart in your family.<span>The founders, Arter.IQ · Made in India</span></p>
 </div></div></div></section>
 
 <section class="ch hon"><div class="w">
@@ -424,6 +426,8 @@ document.querySelectorAll('video.lz').forEach(function(v){lz.observe(v);});
 var hd=document.getElementById('hd'),dk=[].slice.call(document.querySelectorAll('.dark')),t=0;
 function f(){t=0;hd.classList.toggle('sc',scrollY>40);var y=40,on=false;dk.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>=y)on=true;});hd.classList.toggle('dk',on);}
 addEventListener('scroll',function(){if(!t){t=1;requestAnimationFrame(f);}},{passive:true});f();
+var bt=document.getElementById('beats'),bd=document.querySelector('.bdot'),t0=performance.now();
+if(bt){setInterval(function(){bt.textContent=Math.max(1,Math.round((performance.now()-t0)/1000*1.2)).toLocaleString('en-IN');if(bd&&!rm){bd.classList.remove('on');void bd.offsetWidth;bd.classList.add('on');}},833);}
 document.querySelectorAll('.pk button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pk button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');document.getElementById('flv').textContent=b.dataset.f;});});
 })();
 </script>
