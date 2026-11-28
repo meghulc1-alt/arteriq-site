@@ -1550,6 +1550,57 @@ body:has(.hbgv) .hdr:not(.sc) .ldesc{color:#FFB3A6!important}
 .inmrs b{font-size:12px;letter-spacing:.14em;color:#B4570F;font-weight:600}
 @media (max-width:900px){.isnot{padding:72px 0}.ing{grid-template-columns:1fr}.insafe{grid-template-columns:1fr;padding:24px}.inmrs{border-left:0;padding-left:0;border-top:1px solid rgba(61,42,18,.15);padding-top:18px;flex-direction:row;flex-wrap:wrap;gap:16px}.inmrs span{font-size:20px}}
 .isnot,body:has(.hbgv) .sheet > section.isnot{background:#0F2A44!important}
+/* ===== flow video hero: centred, premium ===== */
+.leapbx.hfull:has(.hbgf),.hfull .hbg.hbgf,body:has(.hbgf),body:has(.hbgf) .aq,.hfull .hbg.hbgf .hbgsh{background:#1A0306!important}
+.hfull .hbg.hbgf::after{background:
+ radial-gradient(70% 62% at 50% 46%,rgba(20,2,5,.62) 0%,rgba(20,2,5,.42) 45%,rgba(20,2,5,.12) 75%,rgba(20,2,5,0) 100%),
+ linear-gradient(180deg,rgba(20,2,5,.45) 0%,rgba(20,2,5,0) 18%,rgba(20,2,5,0) 70%,rgba(26,3,6,.9) 96%,#1A0306 100%)!important;height:100%!important}
+.hfull:has(.hbgf) .leaptop,.hfull:has(.hbgf) .leapbot{align-self:center!important;margin-left:auto!important;margin-right:auto!important;text-align:center;width:min(860px,90vw)!important}
+.hfull:has(.hbgf) .leaptag{margin-left:auto;margin-right:auto;color:#FFFFFF;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28)}
+.hfull:has(.hbgf) .leaptag i{background:#FFFFFF;animation-name:tagpulsew}
+@keyframes tagpulsew{0%,100%{box-shadow:0 0 0 3px rgba(255,255,255,.3)}50%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}
+.hfull:has(.hbgf) .leaph{font-size:clamp(46px,6.2vw,96px)!important;line-height:1!important;letter-spacing:-.035em!important;text-shadow:0 4px 40px rgba(40,0,6,.45)}
+.hfull:has(.hbgf) .leaph .leapmute{color:rgba(255,255,255,.92)!important;font-weight:300}
+.hfull:has(.hbgf) .leaph .leapacc{color:#FFFFFF!important;font-weight:600;font-style:italic;letter-spacing:-.03em;text-shadow:0 0 50px rgba(255,180,170,.35)}
+.hfull:has(.hbgf) .leapkick{max-width:620px!important;margin:26px auto 0!important;font-size:clamp(18px,1.55vw,23px);color:rgba(255,236,232,.9)!important;font-weight:300}
+.hfull:has(.hbgf) .leapkick b{color:#FFFFFF;font-weight:600;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:1px}
+.hfull:has(.hbgf) .leapbot{margin-top:28px!important}
+.leapstac{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 16px;font-size:13px!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:rgba(255,225,220,.85)!important;margin:0 0 30px!important}
+.leapstac i{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.55)}
+.hfull:has(.hbgf) .leapbtns{justify-content:center}
+.hfull:has(.hbgf) .btn-pri{background:#FFFFFF!important;color:#1A0306!important}
+.hfull:has(.hbgf) .btn-pri svg *{stroke:#1A0306!important}
+.hfull:has(.hbgf) .leapsec{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.4)!important;color:#FFFFFF!important}
+body:has(.hbgf) .hdr:not(.sc) .ldesc{color:#FFD0C8!important}
+@media (max-width:1000px){
+ .hfull .hbg.hbgf{position:absolute!important;inset:0!important;height:auto!important}
+ .hfull .hbg.hbgf .hvid{object-position:50% 50%}
+ .leapbx.hfull:has(.hbgf){padding-top:130px!important;min-height:100svh}
+ .hfull .hbg.hbgf::after{background:radial-gradient(90% 55% at 50% 40%,rgba(20,2,5,.6) 0%,rgba(20,2,5,.3) 60%,rgba(20,2,5,0) 100%),linear-gradient(180deg,rgba(20,2,5,.4) 0%,rgba(20,2,5,0) 20%,rgba(20,2,5,0) 60%,rgba(26,3,6,.92) 92%,#1A0306 100%)!important;height:100%!important}
+ .hfull:has(.hbgf) .leaph{font-size:clamp(40px,11.5vw,56px)!important}
+ .leapstac{font-size:11.5px!important;gap:8px 12px}
+}
+.hfull:has(.hbgf) .leaph,.hfull:has(.hbgf) .leaptop>*{text-align:center!important;margin-left:auto!important;margin-right:auto!important;max-width:none!important}
+.hfull:has(.hbgf) .leaph > span{display:block}
+.hfull:has(.hbgf) .leapstac{max-width:none!important;width:100%}
+.leapstac span{white-space:nowrap}
+.hfull:has(.hbgf) .leapbtns{display:flex;justify-content:center!important}
+@media (min-width:1001px) and (max-height:800px){.hfull:has(.hbgf) .leaptop{margin-top:-110px!important}.hfull:has(.hbgf) .leaph{font-size:clamp(42px,5.2vw,72px)!important}.hfull:has(.hbgf) .leapkick{margin-top:16px!important;font-size:18px}.leapstac{margin-bottom:20px!important}.hfull:has(.hbgf) .leapbot{margin-top:18px!important}}
+@media (max-width:1000px){.leapstac i{display:none}.leapstac{flex-direction:column;gap:6px!important}}
+.hfull:has(.hbgf) .leaptop{display:flex!important;flex-direction:column!important;align-items:center!important;flex-wrap:nowrap!important}
+.hfull:has(.hbgf) .leaph,.hfull:has(.hbgf) .leapkick{width:100%}
+.hfull:has(.hbgf) .leaptag{width:auto}
+@media (min-width:1001px){.hfull:has(.hbgf) .leaptop{margin-top:20px!important}}
+@media (min-width:1001px) and (max-height:800px){.hfull:has(.hbgf) .leaptop{margin-top:-40px!important}}
+@media (max-width:1000px){.leapstac{font-size:11px!important;letter-spacing:.12em}}
+@media (min-width:1001px){.leapbx.hfull:has(.hbgf){padding:96px 24px 205px!important}.hfull:has(.hbgf) .leaptop{margin-top:0!important}.leapstac{font-size:12px!important;letter-spacing:.12em}}
+@media (min-width:1001px) and (max-height:800px){.leapbx.hfull:has(.hbgf){padding:78px 24px 178px!important}.hfull:has(.hbgf) .leaptop{margin-top:0!important}.hfull:has(.hbgf) .leaptag{margin-bottom:14px}.hfull:has(.hbgf) .leaph{font-size:clamp(40px,4.6vw,62px)!important}.hfull:has(.hbgf) .leapkick{margin-top:12px!important;font-size:17px}.leapstac{margin-bottom:16px!important}.hfull:has(.hbgf) .leapbot{margin-top:12px!important}}
+@media (max-width:1000px){.leapstac{letter-spacing:.07em!important}}
+.hfull:has(.hbgf) .leapbot{display:flex!important;flex-direction:column!important;align-items:center!important}
+.hfull:has(.hbgf) .leaplead.leapstac{max-width:none!important;width:auto!important}
+.hfull:has(.hbgf) .leapbtns{width:auto!important;margin-left:auto;margin-right:auto}
+@media (max-width:1000px){.hfull:has(.hbgf) .leapbtns{width:100%!important}}
+@media (min-width:1001px){.hfull:has(.hbgf) .leapstac{flex-wrap:nowrap!important;white-space:nowrap}}
 
 [hidden]{display:none!important}
 </style>
@@ -1564,14 +1615,14 @@ body:has(.hbgv) .hdr:not(.sc) .ldesc{color:#FFB3A6!important}
 <a class="hcta" href="#offer">Start Protocol 60<span class="hcta-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E63E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
 </div></header>
 
-<section id="top" class="leap leapbx hfull" aria-label="A heavy anchor chain pulled steadily through deep water">
-<div class="hbg hbgd hbgk hbgv" aria-hidden="true"><video class="hvid" autoplay muted loop playsinline preload="auto" poster="images/chain-poster.webp" data-pm="images/chain-poster-m.webp" data-d="images/chain.mp4" data-m="images/chain-m.mp4"></video><div class="hbgsh"></div></div>
+<section id="top" class="leap leapbx hfull" aria-label="Red light flowing smoothly, like healthy blood flow">
+<div class="hbg hbgd hbgk hbgv hbgf" aria-hidden="true"><video class="hvid" autoplay muted loop playsinline preload="auto" poster="images/flow-poster.webp" data-pm="images/flow-poster-m.webp" data-d="images/flow.mp4" data-m="images/flow-m.mp4"></video><div class="hbgsh"></div></div>
 <div class="leaptop rise">
 <p class="leapeye">Heart &amp; Artery Care</p>
-<p class="leaptag"><i></i>Protocol 60 · Cardiovascular care</p><h1 class="disp h1 leaph leaphk"><span class="leapmute">Every heartbeat moves your blood.</span> <span class="leapacc">Help it move freely.</span></h1><p class="leapkick">A steady heart is built from strong daily links. Nattokinase helps keep your blood flowing smoothly.</p>
+<p class="leaptag"><i></i>Protocol 60 · Japanese heart care</p><h1 class="disp h1 leaph leaphk"><span class="leapmute">Keep your blood</span> <span class="leapacc">flowing freely.</span></h1><p class="leapkick">One <b>10,000 FU nattokinase</b> sachet a day to support healthy blood flow and a steadier heart.</p>
 </div>
 <div class="leapbot rise">
-<p class="leaplead">One <b class="leapfu2">10,000 FU nattokinase</b> sachet a day is your strongest link, with two blood tests and a specialist to show you what’s changing.</p>
+<p class="leaplead leapstac"><span>Two blood tests</span><i></i><span>One specialist</span><i></i><span>60 days to see what’s changing</span></p>
 <div class="leapbtns"><a class="btn btn-pri" href="#protocol">See how it works <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn leapsec" href="science.html">The science</a></div>
 </div>
 <div class="prf" aria-label="Key facts"><div class="wrap prfg">
