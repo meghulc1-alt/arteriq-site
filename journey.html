@@ -1721,6 +1721,28 @@ body:has(.hbgf) .why .whytop{display:none!important}
 .pl:has(.plart) .pln{margin-top:2px}
 .plart{aspect-ratio:260/146}
 .plsvg .beat{transform-origin:140px 80px}
+/* ===== founders: globe with India ===== */
+.fnd{position:relative;overflow:hidden;background:radial-gradient(70% 90% at 12% 70%,#F7EDE9 0%,rgba(247,237,233,0) 70%),#FCF9F6!important}
+.fndglobe{position:absolute;left:-14%;top:50%;width:min(860px,72vw);aspect-ratio:1;transform:translateY(-46%);pointer-events:none;opacity:.95;
+ -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 58%,rgba(0,0,0,.5) 66%,transparent 74%);mask-image:radial-gradient(circle at 50% 50%,#000 58%,rgba(0,0,0,.5) 66%,transparent 74%)}
+.fndglobe img{width:100%;height:100%;display:block;animation:globefloat 14s ease-in-out infinite}
+@keyframes globefloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-1.2deg)}}
+.fnd .fndg{position:relative;z-index:1}
+.fnd .fndl{text-shadow:0 0 24px rgba(252,249,246,.9)}
+@media (max-width:1000px){.fndglobe{left:auto;right:-35%;top:-60px;width:110vw;transform:none;opacity:.55}}
+@media (prefers-reduced-motion:reduce){.fndglobe img{animation:none}}
+@media (min-width:1001px){
+ .fndglobe{left:-130px;top:-170px;transform:none;width:min(860px,64vw)}
+ .fnd .fndg{align-items:end}
+ .fnd .fndl{align-self:end;padding-bottom:8px}
+ .fnd{padding-top:150px!important}
+}
+@media (max-width:1000px){.fndglobe{top:-170px;right:-40%;opacity:.5}}
+@media (max-width:1000px){
+ .fnd{padding-top:20px!important}
+ .fndglobe{position:relative!important;left:50%!important;right:auto!important;top:auto!important;transform:translateX(-50%)!important;width:125vw!important;opacity:.95!important;margin:0 0 -52vw;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 45%,rgba(0,0,0,.4) 62%,transparent 78%);mask-image:linear-gradient(180deg,#000 0%,#000 45%,rgba(0,0,0,.4) 62%,transparent 78%)}
+}
 
 [hidden]{display:none!important}
 </style>
