@@ -1665,6 +1665,38 @@ img[src*="fibrin"]{filter:saturate(.75) brightness(.62) contrast(1.08)}
  linear-gradient(180deg,rgba(20,2,5,.45) 0%,rgba(20,2,5,.1) 18%,rgba(20,2,5,.1) 70%,rgba(26,3,6,.9) 96%,#1A0306 100%)!important}
 @media (max-width:1000px){.hfull .hbg.hbgf::after{background:radial-gradient(95% 50% at 50% 38%,rgba(20,2,5,.75) 0%,rgba(20,2,5,.45) 60%,rgba(20,2,5,.1) 100%),linear-gradient(180deg,rgba(20,2,5,.4) 0%,rgba(20,2,5,0) 20%,rgba(20,2,5,0) 60%,rgba(26,3,6,.92) 92%,#1A0306 100%)!important}}
 .hfull:has(.hbgf) .leaph .sw{overflow:visible!important}
+/* ===== A+B: one continuous dark opening ===== */
+/* B: video dims + blurs, opening copy fades as the next section rises */
+.hfull:has(.hbgf) .hvid{filter:blur(calc(var(--dk,0) * 14px)) brightness(calc(1 - var(--dk,0) * .55))!important;transform:scale(calc(1.02 + var(--dk,0) * .06))}
+.hfull:has(.hbgf) .leaptop,.hfull:has(.hbgf) .leapbot,.hfull:has(.hbgf) .prf{opacity:calc(1 - var(--dk,0) * 1.6);transform:translateY(calc(var(--dk,0) * -40px))}
+/* A: no seam, no panel edge, same wine */
+body:has(.hbgf) .sheet{background:transparent!important}
+body:has(.hbgf) .sheet > .why:first-child{margin:0!important;border-radius:0!important;box-shadow:none!important;padding-top:300px!important;
+ background:linear-gradient(180deg,rgba(26,3,6,0) 0px,rgba(26,3,6,.55) 140px,rgba(26,3,6,.9) 300px,#1F0409 460px,#2A050B 70%,#3A0812 100%)!important}
+body:has(.hbgf) .sheet > .why:first-child::before{background:none!important}
+body:has(.hbgf) .sheet > .why:first-child::after{background:linear-gradient(180deg,rgba(58,8,18,0),#3A0812)!important}
+body:has(.hbgf) .why .whybg{opacity:.05!important;filter:saturate(.3) blur(1px)!important}
+body:has(.hbgf) .why .whytop{display:none!important}
+/* facts bar: dark glass at the foot of the video */
+.hfull:has(.hbgf) .prf{background:rgba(20,2,5,.38)!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:none!important;-webkit-backdrop-filter:blur(16px) saturate(1.1)!important;backdrop-filter:blur(16px) saturate(1.1)!important}
+.hfull:has(.hbgf) .prf b{color:#FFFFFF!important}
+.hfull:has(.hbgf) .prf .prfl{color:rgba(255,228,224,.66)!important}
+.hfull:has(.hbgf) .prfic{background:rgba(255,255,255,.08)!important;box-shadow:none!important}
+.hfull:has(.hbgf) .prfic svg *{stroke:#F0B9C0!important}
+.hfull:has(.hbgf) .prfi{border-left-color:rgba(255,255,255,.12)!important}
+/* header stays dark glass over every dark section */
+.hdr.sc.dk .hbar{background:rgba(26,3,6,.55)!important;-webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important;box-shadow:none!important;border-color:rgba(255,255,255,.08)!important}
+.hdr.sc.dk .logo,.hdr.sc.dk .hnav a{color:#FFFFFF!important}
+.hdr.sc.dk .ldesc{color:#F0B9C0!important;border-left-color:rgba(255,255,255,.25)!important}
+.hdr .hbar{transition:background .4s,color .4s,height .35s}
+@media (prefers-reduced-motion:reduce){.hfull:has(.hbgf) .hvid{filter:brightness(.8)!important;transform:none}}
+@media (max-width:1000px){
+ .hfull:has(.hbgf) .prf{background:rgba(20,2,5,.42)!important;border:1px solid rgba(255,255,255,.14)!important;-webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important;border-radius:18px!important;margin-left:0!important;margin-right:0!important}
+ .hfull:has(.hbgf) .prf b{color:#FFFFFF!important}.hfull:has(.hbgf) .prf .prfl{color:rgba(255,228,224,.66)!important}
+ .hfull:has(.hbgf) .prfi{border-left-color:rgba(255,255,255,.12)!important;background:transparent!important}
+ .hdr.dk .hbar{background:rgba(26,3,6,.55)!important;-webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important;box-shadow:none!important}
+ .hdr.dk .logo{color:#FFFFFF!important}
+}
 
 [hidden]{display:none!important}
 </style>
